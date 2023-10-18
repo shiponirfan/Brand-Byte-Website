@@ -35,7 +35,7 @@ const HomeSlider = () => {
         <SwiperSlide>
         <div className="hero min-h-home-h" style={{backgroundImage: 'url(/src/assets/images/home_slider/home_slider1.jpg)'}}>
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="container mx-auto text-white">
+            <div className="container mx-auto px-5 lg:px-8 text-white">
                     <div className="max-w-2xl">
                     <h1 className="mb-5 text-6xl font-rajdhani font-bold uppercase">Discover Iconic Brands</h1>
                     <p className="mb-5 max-w-lg">Explore iconic brands in technology, autos, and more, redefining innovation and excellence, all in one place for you.</p>
@@ -49,7 +49,7 @@ const HomeSlider = () => {
         <SwiperSlide>
         <div className="hero min-h-home-h" style={{backgroundImage: 'url(/src/assets/images/home_slider/home_slider2.jpg)'}}>
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="container mx-auto text-white">
+            <div className="container mx-auto px-5 lg:px-8 text-white">
                     <div className="max-w-2xl">
                     <h1 className="mb-5 text-6xl font-rajdhani font-bold uppercase">The Pinnacle of Innovation</h1>
                     <p className="mb-5 max-w-lg">Experience innovations zenith with global giants, setting industry standards for cutting-edge excellence. Discover the future of tech and autos.</p>
@@ -63,7 +63,7 @@ const HomeSlider = () => {
         <SwiperSlide>
         <div className="hero min-h-home-h" style={{backgroundImage: 'url(/src/assets/images/home_slider/home_slider3.jpg)'}}>
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="container mx-auto text-white">
+            <div className="container mx-auto px-5 lg:px-8 text-white">
                     <div className="max-w-2xl">
                     <h1 className="mb-5 text-6xl font-rajdhani font-bold uppercase">Brand Excellence Unveiled</h1>
                     <p className="mb-5 max-w-lg">Unveil celebrated brands epitomizing excellence, creating new benchmarks across various industries. Experience a world of brand brilliance.</p>
@@ -77,7 +77,7 @@ const HomeSlider = () => {
         <SwiperSlide>
         <div className="hero min-h-home-h" style={{backgroundImage: 'url(/src/assets/images/home_slider/home_slider4.jpg)'}}>
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="container mx-auto text-white">
+            <div className="container mx-auto px-5 lg:px-8 text-white">
                     <div className="max-w-2xl">
                     <h1 className="mb-5 text-6xl font-rajdhani font-bold uppercase">Legendary Names, Exceptional Choices</h1>
                     <p className="mb-5 max-w-lg">Choose legendary brands, the embodiment of quality and reliability, offering exceptional choices for all. Elevate your tech, auto, and more.</p>
@@ -91,7 +91,7 @@ const HomeSlider = () => {
         <SwiperSlide>
         <div className="hero min-h-home-h" style={{backgroundImage: 'url(/src/assets/images/home_slider/home_slider5.jpg)'}}>
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="container mx-auto text-white">
+            <div className="container mx-auto px-5 lg:px-8 text-white">
                     <div className="max-w-2xl">
                     <h1 className="mb-5 text-6xl font-rajdhani font-bold uppercase">Your Gateway to Top Brands</h1>
                     <p className="mb-5 max-w-lg">Step into a realm of top-tier tech, electronics, and autos - where excellence meets unparalleled choice. Explore the best</p>

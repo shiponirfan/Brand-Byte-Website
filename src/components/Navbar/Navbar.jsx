@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <div className="shadow-md">
       <div className="bg-brand-primary py-2">
-        <div className="container mx-auto flex justify-between items-center text-white">
+        <div className="container mx-auto px-5 lg:px-8 flex justify-between items-center text-white">
           <div className="flex justify-between items-center gap-2">
             <BiPhoneCall />
             <span>+8801710467100</span>
@@ -40,7 +40,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto navbar px-0 py-4">
+      <div className="container mx-auto px-5 lg:px-8 navbar py-4">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -92,7 +92,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+              className="mt-3 p-2 z-20 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
             >
               <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
                 <div className="font-medium ">Shipon Irfan</div>

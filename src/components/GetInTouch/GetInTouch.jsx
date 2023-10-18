@@ -2,7 +2,13 @@ import Swal from "sweetalert2";
 const GetInTouch = () => {
   const handleGetInTouch = (e) => {
     e.preventDefault();
-    Swal.fire("Thank You", "Successfully Message Send", "success");
+    Swal.fire({
+      title: 'Thank You',
+      text: 'Successfully Message Send',
+      icon: 'success',
+      confirmButtonText: 'Go Back',
+      buttonsStyling: false,
+    })
   };
   return (
     <div

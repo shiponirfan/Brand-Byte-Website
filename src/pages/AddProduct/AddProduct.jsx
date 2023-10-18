@@ -2,10 +2,11 @@ import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import image from "../../assets/images/home_slider/home_slider3.jpg";
 import { Rating, Star } from "@smastrom/react-rating";
 import { useState } from "react";
+import Swal from "sweetalert2";
 const AddProduct = () => {
   const [rating, setRating] = useState(0);
-  const [brandValue, setBrandValue] = useState('');
-  const [categoryValue, setCategoryValue] = useState('');
+  const [brandName, setBrandName] = useState("");
+  const [category, setCategory] = useState("");
 
   const myStyles = {
     itemShapes: Star,
@@ -18,17 +19,43 @@ const AddProduct = () => {
       <span>Add Product</span>
     </li>
   );
-
-  const handleAddProduct = e =>{
+  const handleAddProduct = (e) => {
     e.preventDefault();
     const from = e.target;
     const carName = from.car_name.value;
     const price = from.price.value;
     const photoUrl = from.photo_url.value;
     const description = from.description.value;
-    const addedProduct = {carName, price, description, photoUrl, brandValue, categoryValue, rating};
-    console.log(addedProduct);
-  }
+    const addedProduct = {
+      carName,
+      price,
+      description,
+      photoUrl,
+      brandName,
+      category,
+      rating,
+    };
+
+    fetch("http://localhost:5000/products", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(addedProduct),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Product Added Successfully",
+            text: "Your Product Have Been Added",
+            icon: "success",
+            confirmButtonText: "Go Back",
+            buttonsStyling: false,
+          });
+        }
+      });
+  };
 
   return (
     <div>
@@ -47,7 +74,7 @@ const AddProduct = () => {
                     Car Name
                   </label>
                   <input
-                  required
+                    required
                     type="text"
                     name="car_name"
                     id="car_name"
@@ -60,9 +87,9 @@ const AddProduct = () => {
                     Brand Name
                   </label>
                   <select
-                  required
-                  onChange={event => setBrandValue(event.target.value)}
-                  defaultValue={brandValue}
+                    required
+                    onChange={(event) => setBrandName(event.target.value)}
+                    defaultValue={brandName}
                     className="select select-primary w-full focus:outline-none"
                     id="brand_name"
                   >
@@ -82,9 +109,8 @@ const AddProduct = () => {
                     Select Category
                   </label>
                   <select
-                  required
-                  onChange={event => setCategoryValue(event.target.value)}
-                  
+                    required
+                    onChange={(event) => setCategory(event.target.value)}
                     className="select select-primary w-full focus:outline-none"
                     id="category"
                   >
@@ -92,18 +118,23 @@ const AddProduct = () => {
                     <option value="Sedans">Sedans</option>
                     <option value="LuxuryCar">Luxury Car</option>
                     <option value="HybridVehicles">Hybrid Vehicles</option>
-                    <option value="SUVsAndCrossovers">SUVs and Crossovers</option>
-                    <option value="ElectricVehicles">Electric Vehicles (EVs)</option>
-                    <option value="ClassicVintageCars">Classic and Vintage Cars</option>
+                    <option value="SUVsAndCrossovers">
+                      SUVs and Crossovers
+                    </option>
+                    <option value="ElectricVehicles">
+                      Electric Vehicles (EVs)
+                    </option>
+                    <option value="ClassicVintageCars">
+                      Classic and Vintage Cars
+                    </option>
                   </select>
                 </div>
                 <div className="w-1/2">
-
                   <label htmlFor="price" className="label font-bold">
                     Price
                   </label>
                   <input
-                  required
+                    required
                     type="text"
                     name="price"
                     id="price"
@@ -118,7 +149,7 @@ const AddProduct = () => {
                     Image URL
                   </label>
                   <input
-                  required
+                    required
                     type="text"
                     name="photo_url"
                     id="photo_url"

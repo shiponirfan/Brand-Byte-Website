@@ -14,6 +14,9 @@ export default {
         'brand-primary': '#513de8',
         'brand-secondary': '#4028e6',
       },
+      minHeight: {
+        'home-h': 'calc(100vh - 141px)',
+      }
     },
   },
   plugins: [require("daisyui")],

@@ -6,7 +6,7 @@ const GetInTouch = () => {
   };
   return (
     <div
-      className="bg-cover bg-no-repeat bg-bottom "
+      className="bg-cover bg-no-repeat bg-bottom"
       style={{ backgroundImage: "url(/src/assets/images/GetInTouch.jpg)" }}
     >
       {/* <!-- ====== Contact Section Start --> */}

@@ -6,7 +6,7 @@ const ChooseUs = () => {
         <div className="text-center mb-8">
           <h2 className="text-6xl font-bold font-rajdhani uppercase">
             WHY
-            <span className="text-brand-primary">CHOOSE US</span>
+            <span className="text-brand-primary"> CHOOSE US</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

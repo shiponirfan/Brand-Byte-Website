@@ -72,7 +72,7 @@ const ProductsCard = ({ product }) => {
             </Link>
           </div>
           <div className="flex-grow">
-            <Link to="/updateProduct">
+            <Link to={`/updateProduct/${_id}`}>
               <button className="bg-brand-primary w-full hover:bg-black hover:scale-105 duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
                 Update Product
               </button>

@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { Rating, Star } from "@smastrom/react-rating";
 import { BsCheck } from "react-icons/bs";
 import Discount from "../../components/Discount/Discount";
+import Swal from "sweetalert2";
+
 const ProductDetails = () => {
   const product = useLoaderData();
   const { carName, price, photoUrl, brandName, description, category, rating } =
@@ -30,6 +32,29 @@ const ProductDetails = () => {
       </li>
     </>
   );
+
+  const handleAddToCart = () => {
+    fetch("http://localhost:5000/addToCart", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(product),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Successfully Added To Cart",
+            text: "Go My Cart Page To Show All The Cart",
+            icon: "success",
+            confirmButtonText: "Go Back",
+            buttonsStyling: false,
+          });
+        }
+      });
+  };
+
   return (
     <div>
       <ScrollToTopOnMount />
@@ -171,7 +196,10 @@ const ProductDetails = () => {
                 ${price.slice(0, 2)},{price.slice(2, 5)}
               </h2>
               <p className="mb-3">Taxes & Licensing included</p>
-              <button className="bg-brand-primary hover:bg-white hover:text-brand-primary hover:scale-105 duration-300 mx-auto text-white font-medium  text-xl  py-5 px-14 rounded-md flex justify-center items-center">
+              <button
+                onClick={handleAddToCart}
+                className="bg-brand-primary hover:bg-white hover:text-brand-primary hover:scale-105 duration-300 mx-auto text-white font-medium  text-xl  py-5 px-14 rounded-md flex justify-center items-center"
+              >
                 Add To Cart
               </button>
             </div>

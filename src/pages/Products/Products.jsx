@@ -2,10 +2,9 @@ import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import image from "../../assets/images/home_slider/home_slider3.jpg";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import ProductsCard from "./ProductsCard";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 const Products = () => {
-  const loadedProducts = useLoaderData();
-  const [products, setProducts] = useState(loadedProducts);
+  const products = useLoaderData();
   const param = useParams();
   function ScrollToTopOnMount() {
     useEffect(() => {

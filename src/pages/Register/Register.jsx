@@ -16,7 +16,6 @@ const Register = () => {
       <span>{"Registration"}</span>
     </li>
   );
-
   const handleGoogleSignin = () => {
     googleLogin()
       .then(() => {

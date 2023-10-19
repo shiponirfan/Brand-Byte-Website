@@ -10,11 +10,13 @@ import Login from "../pages/Login/Login";
 import AllBrands from "../pages/AllBrands/AllBrands";
 import Register from "../pages/Register/Register";
 import PrivateRoutes from "./PrivateRoutes";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const Routes = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -74,6 +76,7 @@ const Routes = createBrowserRouter([
         path: "/Register",
         element: <Register></Register>,
       },
+     
     ],
   },
 ]);

@@ -43,7 +43,7 @@ const Navbar = () => {
       <li className="hover:text-brand-secondary duration-300">
         <NavLink to="/brands" className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-brand-primary" : ""
-          }>All Brands</NavLink>
+          }>Brands</NavLink>
       </li>
       <li className="hover:text-brand-secondary duration-300">
         <NavLink to="/addProduct" className={({ isActive, isPending }) =>
@@ -53,7 +53,7 @@ const Navbar = () => {
       <li className="hover:text-brand-secondary duration-300">
         <NavLink to="/myCart" className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-brand-primary" : ""
-          }>My Cart </NavLink>
+          }>My Cart</NavLink>
       </li>
       
     </>
@@ -77,7 +77,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="container mx-auto px-5 lg:px-8 navbar py-4">
-        <div className="navbar-start">
+        <div className="justify-start flex-grow">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
@@ -111,7 +111,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <div className="navbar-end">
+        <div className="justify-end flex-grow">
           {user ? (
             <div className="dropdown dropdown-end">
               <div

@@ -46,6 +46,8 @@ const AddProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
+            from.reset();
+            setRating(0);
           Swal.fire({
             title: "Product Added Successfully",
             text: "Your Product Have Been Added",
@@ -98,8 +100,8 @@ const AddProduct = () => {
                     <option value="BMW">BMW</option>
                     <option value="Tesla">Tesla</option>
                     <option value="Toyota">Toyota</option>
+                    <option value="Mercedes">Mercedes</option>
                     <option value="Lamborghini">Lamborghini</option>
-                    <option value="MercedesBenz">Mercedes Benz</option>
                   </select>
                 </div>
               </div>

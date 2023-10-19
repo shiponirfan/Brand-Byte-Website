@@ -14,7 +14,7 @@ const BrandsCard = ({ brand }) => {
       </div>
       <div className="p-6 text-center flex justify-between items-center">
         <h2 className="text-4xl font-rajdhani font-bold">{brand_name}</h2>
-        <Link to="/login">
+        <Link to={`/products/${brand_name}`}>
           <button className="bg-white hover:bg-slate-100 duration-300 text-black  font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center ">
             Show Cars
           </button>

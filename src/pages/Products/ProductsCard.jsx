@@ -13,11 +13,11 @@ const ProductsCard = ({ product }) => {
   return (
     <div className="flex flex-col rounded-lg p-4 border group  hover:border-brand-primary duration-300  shadow-sm shadow-indigo-100">
       <div className="overflow-hidden rounded-md">
-      <img
-        alt={carName}
-        src={photoUrl}
-        className="h-56 w-full rounded-md object-cover group-hover:scale-125 duration-500"
-      />
+        <img
+          alt={carName}
+          src={photoUrl}
+          className="h-56 w-full rounded-md object-cover group-hover:scale-125 duration-500"
+        />
       </div>
       <div className="flex-grow flex flex-col  mt-6">
         <div className="space-y-1">
@@ -59,7 +59,7 @@ const ProductsCard = ({ product }) => {
             <div className="mt-1.5 sm:mt-0">
               <p className="text-gray-500">Price</p>
 
-              <p className="font-medium">${price}</p>
+              <p className="font-medium">${price.slice(0, 2)},{price.slice(2, 5)}</p>
             </div>
           </div>
         </div>

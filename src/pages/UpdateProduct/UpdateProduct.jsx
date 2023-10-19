@@ -201,7 +201,7 @@ const UpdateProduct = () => {
           </form>
         </div>
         <div className="w-1/2">
-          <img src="/src/assets/images/bmwcar.png" alt="" />
+          <img src="/src/assets/images/bmwcar.png" alt="car" />
         </div>
       </div>
     </div>

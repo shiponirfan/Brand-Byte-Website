@@ -295,20 +295,20 @@ const MyCart = () => {
       ) : (
         <div className="container mx-auto text-center py-24">
           <h2 className="font-bold text-5xl font-rajdhani text-brand-primary">
-            No available products were found.
+          No available cart item were found.
           </h2>
           <h4 className="font-medium text-3xl  my-2">
-            If you wish, you can add a product.
+          If you wish, you can add a product to cart.
           </h4>
           <div className="flex gap-6 mt-4 justify-center">
-            <Link to={"/addProduct"}>
+            <Link to={"/brands"}>
               <button className="bg-brand-primary  hover:bg-black hover:scale-105 duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
-                Add Product
+                Show Product
               </button>
             </Link>
-            <Link to="/updateProduct">
+            <Link to="/">
               <button className="bg-brand-primary  hover:bg-black hover:scale-105 duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
-                Update Product
+                Back To Home
               </button>
             </Link>
           </div>

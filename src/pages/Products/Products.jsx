@@ -46,9 +46,9 @@ const Products = () => {
                 Add Product
               </button>
             </Link>
-            <Link to="/updateProduct">
+            <Link to="/">
               <button className="bg-brand-primary  hover:bg-black hover:scale-105 duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
-                Update Product
+                Back To Home
               </button>
             </Link>
           </div>

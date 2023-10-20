@@ -1,11 +1,17 @@
-import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
-import image from "../../assets/images/home_slider/home_slider3.jpg";
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import image from "../../assets/images/home_slider/home_slider3.jpg";
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import ProductsCard from "./ProductsCard";
 import { useEffect } from "react";
+import DynamicProductsSlider from "../../components/DynamicProductsSlider/DynamicProductsSlider/DynamicProductsSlider";
+import BrandShowcase from "../../components/BrandShowcase/BrandShowcase";
+import Discount from "../../components/Discount/Discount";
+
 const Products = () => {
   const products = useLoaderData();
   const param = useParams();
+  const bannerBrand = param.brand_name;
+
   function ScrollToTopOnMount() {
     useEffect(() => {
       window.scrollTo(0, 0);
@@ -26,11 +32,19 @@ const Products = () => {
         name={param.brand_name}
         breadCrumbs={breadCrumbs}
       ></Breadcrumbs>
+
       {products.length > 0 ? (
-        <div className="container mx-auto px-6 lg:px-8 py-24 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
-            <ProductsCard key={product._id} product={product}></ProductsCard>
-          ))}
+        <div>
+          <DynamicProductsSlider
+            bannerBrand={bannerBrand}
+          ></DynamicProductsSlider>
+          <div className="container mx-auto px-6 lg:px-8 py-24 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((product) => (
+              <ProductsCard key={product._id} product={product}></ProductsCard>
+            ))}
+          </div>
+          <BrandShowcase></BrandShowcase>
+          <Discount></Discount>
         </div>
       ) : (
         <div className="container mx-auto text-center py-24">

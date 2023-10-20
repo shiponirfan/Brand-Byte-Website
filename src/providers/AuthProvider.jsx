@@ -8,7 +8,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
-  updateProfile
+  updateProfile,
 } from "firebase/auth";
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
@@ -75,6 +75,7 @@ const AuthProvider = ({ children }) => {
       unSubscribe();
     };
   }, []);
+
   const authInfo = {
     user,
     signIn,
@@ -86,7 +87,7 @@ const AuthProvider = ({ children }) => {
   };
   return (
     // <HelmetProvider>
-      <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
     // </HelmetProvider>
   );
 };

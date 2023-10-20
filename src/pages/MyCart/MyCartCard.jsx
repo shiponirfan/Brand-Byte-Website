@@ -3,16 +3,20 @@ import { Rating, Star } from "@smastrom/react-rating";
 import { BsFillTrashFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 const MyCartCard = ({ cartItem, setCartItems, cartItems }) => {
   const { _id, carName, price, photoUrl, brandName, category, rating } =
     cartItem;
+  const { user } = useContext(AuthContext);
   const myStyles = {
     itemShapes: Star,
     activeFillColor: "#ffb700",
     inactiveFillColor: "#fbf1a9",
   };
   const handleRemove = () => {
-    fetch(`http://localhost:5000/addToCart/${_id}`, {
+    const userEmail = user.email;
+    fetch(`http://localhost:5000/addToCart/${_id}/${userEmail}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

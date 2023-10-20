@@ -1,18 +1,20 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import image from "../../assets/images/home_slider/home_slider2.jpg";
 import MyCartCard from "./MyCartCard";
 import Swal from "sweetalert2";
 import Discount from "../../components/Discount/Discount";
+import { AuthContext } from "../../providers/AuthProvider";
 const MyCart = () => {
+  const { user } = useContext(AuthContext);
   const [cartItems, setCartItems] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:5000/addToCart")
+    fetch(`http://localhost:5000/addToCart/${user.email}`)
       .then((res) => res.json())
       .then((data) => setCartItems(data));
-  }, []);
+  }, [user.email]);
   function ScrollToTopOnMount() {
     useEffect(() => {
       window.scrollTo(0, 0);
@@ -295,10 +297,10 @@ const MyCart = () => {
       ) : (
         <div className="container mx-auto text-center py-24">
           <h2 className="font-bold text-5xl font-rajdhani text-brand-primary">
-          No available cart item were found.
+            No available cart item were found.
           </h2>
           <h4 className="font-medium text-3xl  my-2">
-          If you wish, you can add a product to cart.
+            If you wish, you can add a product to cart.
           </h4>
           <div className="flex gap-6 mt-4 justify-center">
             <Link to={"/brands"}>

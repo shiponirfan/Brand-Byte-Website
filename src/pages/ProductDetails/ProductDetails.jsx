@@ -1,15 +1,25 @@
 import { useLoaderData } from "react-router-dom";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Rating, Star } from "@smastrom/react-rating";
 import { BsCheck } from "react-icons/bs";
 import Discount from "../../components/Discount/Discount";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const ProductDetails = () => {
   const product = useLoaderData();
-  const { carName, price, photoUrl, brandName, description, category, rating } =
-    product;
+  const { user } = useContext(AuthContext);
+  const {
+    _id,
+    carName,
+    price,
+    photoUrl,
+    brandName,
+    description,
+    category,
+    rating,
+  } = product;
   const myStyles = {
     itemShapes: Star,
     activeFillColor: "#ffb700",
@@ -34,23 +44,40 @@ const ProductDetails = () => {
   );
 
   const handleAddToCart = () => {
-    fetch("http://localhost:5000/addToCart", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(product),
-    })
+    const userEmail = user.email;
+    fetch(`http://localhost:5000/addToCart/${userEmail}`)
       .then((res) => res.json())
       .then((data) => {
-        if (data.insertedId) {
+        const checkCartItem = data.find((item) => item._id === _id);
+        if (checkCartItem) {
           Swal.fire({
-            title: "Successfully Added To Cart",
+            title: "Already Added To The Cart",
             text: "Go My Cart Page To Show All The Cart",
-            icon: "success",
+            icon: "warning",
             confirmButtonText: "Go Back",
             buttonsStyling: false,
           });
+        } else {
+          const productItem = { ...product, userEmail: user.email };
+          fetch("http://localhost:5000/addToCart", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(productItem),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.insertedId) {
+                Swal.fire({
+                  title: "Successfully Added To Cart",
+                  text: "Go My Cart Page To Show All The Cart",
+                  icon: "success",
+                  confirmButtonText: "Go Back",
+                  buttonsStyling: false,
+                });
+              }
+            });
         }
       });
   };

@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className=" bg-gradient-to-r from-brand-primary to-blue-500 pt-16 lg:pt-24 pb-10  text-white">
+    <div className="dark:from-gray-950 dark:to-gray-900 bg-gradient-to-r from-brand-primary to-blue-500 pt-16 lg:pt-24 pb-10  text-white">
       <div className="grid gap-10 row-gap-6 mx-auto container px-6 lg:px-8 mb-8 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2">
           <Link to="/">

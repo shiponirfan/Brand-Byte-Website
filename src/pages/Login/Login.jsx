@@ -4,11 +4,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BsGoogle } from "react-icons/bs";
 import { BiLogIn } from "react-icons/bi";
 import { useContext } from "react";
+import logo from "/src/assets/images/logo.png";
+import logoWhite from "/src/assets/images/logo-white.png";
 import { AuthContext } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
-  const { logIn, googleLogin } = useContext(AuthContext);
+  const { logIn, googleLogin, theme } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const breadCrumbs = (
@@ -111,13 +113,13 @@ const Login = () => {
         name={"Login Here"}
         breadCrumbs={breadCrumbs}
       ></Breadcrumbs>
-      <div className="xl:py-24 lg:py-20 md:py-16 py-10">
+      <div className="xl:py-24 lg:py-20 md:py-16 py-10 dark:bg-gray-900">
         <div className="container mx-auto px-6 lg:px-8 flex flex-col md:flex-row gap-8 items-center">
           <div className="md:w-1/2 w-full ">
             <div className="w-full hover:border-brand-primary duration-300 max-w-sm mx-auto p-4  bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
               <img
                 className="w-48 mx-auto mb-2"
-                src="/src/assets/images/logo.png"
+                src={theme === "light" ? logo : logoWhite}
                 alt="logo"
               />
               <h5 className="text-2xl mb-6 text-center font-rajdhani font-bold text-gray-900 dark:text-white">

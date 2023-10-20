@@ -11,11 +11,12 @@ const Brands = () => {
       });
   }, []);
   return (
-    <div className="container mx-auto py-10 md:py-16 xl:py-24 px-6 lg:px-8">
-      <div className="text-center lg:w-3/4 xl:w-1/2 mx-auto">
+    <div className="dark:bg-gray-900">
+    <div className="container  mx-auto py-10 md:py-16 xl:py-24 px-6 lg:px-8">
+      <div className="text-center dark:text-white lg:w-3/4 xl:w-1/2 mx-auto">
         <h2 className="font-rajdhani text-3xl md:text-6xl font-bold uppercase">
           Explore Our Exquisite{" "}
-          <span className="text-brand-primary">Brands Collection</span>
+          <span className="text-brand-primary dark:text-yellow-400">Brands Collection</span>
         </h2>
         <p className="md:text-lg md:px-10 mt-2">
           Discover a curated selection of prestigious brands, embodying quality,
@@ -27,6 +28,7 @@ const Brands = () => {
           <BrandsCard key={brand._id} brand={brand}></BrandsCard>
         ))}
       </div>
+    </div>
     </div>
   );
 };

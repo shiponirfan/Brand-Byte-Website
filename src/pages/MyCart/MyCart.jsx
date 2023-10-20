@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import image from "../../assets/images/home_slider/home_slider2.jpg";
 import MyCartCard from "./MyCartCard";
+import logo from "/src/assets/images/logo.png";
+import logoWhite from "/src/assets/images/logo-white.png";
 import Swal from "sweetalert2";
 import Discount from "../../components/Discount/Discount";
 import { AuthContext } from "../../providers/AuthProvider";
 const MyCart = () => {
-  const { user } = useContext(AuthContext);
+
+  const { user, theme } = useContext(AuthContext);
   const [cartItems, setCartItems] = useState({});
 
   useEffect(() => {
@@ -37,7 +40,7 @@ const MyCart = () => {
     });
   };
   return (
-    <div>
+    <div className="dark:bg-gray-900 dark:text-white">
       <ScrollToTopOnMount />
       <Breadcrumbs
         image={image}
@@ -74,38 +77,38 @@ const MyCart = () => {
                   </button>
                 </div>
               </div>
-              <div className="flow-root mb-8 hover:border-brand-primary duration-300 rounded-lg border border-gray-100 py-4 shadow-sm">
-                <dl className="-my-3 divide-y  divide-gray-100 text-base font-medium">
-                  <div className="p-3 even:bg-gray-50 ">
+              <div className="flow-root mb-8 dark:hover:border-yellow-400 hover:border-brand-primary duration-300 rounded-lg border border-gray-100 py-4 shadow-sm">
+                <dl className="-my-3 divide-y dark:divide-brand-primary divide-gray-100 text-base font-medium">
+                  <div className="p-3 even:bg-gray-50 dark:even:bg-yellow-400 ">
                     <img
                       className="w-full p-2"
-                      src="/src/assets/images/logo.png"
+                      src={theme === "light" ? logo : logoWhite}
                       alt="logo"
                     />
                   </div>
-                  <div className="grid p-3 text-center even:bg-gray-50">
+                  <div className="grid p-3 text-center even:bg-gray-50 dark:even:bg-brand-primary">
                     <dt className="font-bold ">Our Brand</dt>
                   </div>
-                  <div className="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-2 text-center sm:gap-4">
+                  <div className="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 dark:even:bg-brand-primary sm:grid-cols-2 text-center sm:gap-4">
                     <dt className="font-bold ">BMW</dt>
                     <dt className="font-bold ">Toyota</dt>
                   </div>
-                  <div className="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-2 text-center sm:gap-4">
+                  <div className="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 dark:even:bg-brand-primary sm:grid-cols-2 text-center sm:gap-4">
                     <dt className="font-bold ">Audi</dt>
                     <dt className="font-bold ">Mercedes</dt>
                   </div>
-                  <div className="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-2 text-center sm:gap-4">
+                  <div className="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 dark:even:bg-brand-primary sm:grid-cols-2 text-center sm:gap-4">
                     <dt className="font-bold ">Tesla</dt>
                     <dt className="font-bold ">Lamborghini</dt>
                   </div>
                 </dl>
               </div>
-              <div className="divide-y divide-gray-100 rounded-xl border hover:border-brand-primary border-gray-100 bg-white">
+              <div className="divide-y divide-gray-100 rounded-xl border hover:border-brand-primary border-gray-100 bg-white dark:bg-gray-900 dark:hover:border-yellow-400 ">
                 <details
                   className="group p-6 [&_summary::-webkit-details-marker]:hidden"
                   open
                 >
-                  <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-brand-primary">
+                  <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-brand-primary dark:text-yellow-400" >
                     <h2 className="text-lg font-medium">
                       How do I start the car buying process?
                     </h2>
@@ -143,7 +146,7 @@ const MyCart = () => {
                     </span>
                   </summary>
 
-                  <p className="mt-4 leading-relaxed text-gray-700">
+                  <p className="mt-4 leading-relaxed text-gray-700 dark:text-white">
                     To begin the car buying process, you can browse our
                     inventory online and filter by your preferences. Once
                     you&apos;ve found a car you like, contact our sales team to
@@ -152,7 +155,7 @@ const MyCart = () => {
                 </details>
 
                 <details className="group p-6 [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-brand-primary">
+                  <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-brand-primary dark:text-yellow-400">
                     <h2 className="text-lg font-medium">
                       What financing options are available?
                     </h2>
@@ -190,14 +193,14 @@ const MyCart = () => {
                     </span>
                   </summary>
 
-                  <p className="mt-4 leading-relaxed text-gray-700">
+                  <p className="mt-4 leading-relaxed text-gray-700 dark:text-white">
                     We offer a variety of financing options, including loans and
                     lease programs. Our finance experts can help you find the
                     best solution tailored to your budget and credit situation.
                   </p>
                 </details>
                 <details className="group p-6 [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-brand-primary">
+                  <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-brand-primary dark:text-yellow-400">
                     <h2 className="text-lg font-medium">
                       Do you provide warranties or guarantees?
                     </h2>
@@ -235,7 +238,7 @@ const MyCart = () => {
                     </span>
                   </summary>
 
-                  <p className="mt-4 leading-relaxed text-gray-700">
+                  <p className="mt-4 leading-relaxed text-gray-700 dark:text-white">
                     Yes, we provide warranties for most of our vehicles. These
                     warranties can vary, so it&apos;s essential to discuss the
                     specific terms and coverage with our sales team.
@@ -244,7 +247,7 @@ const MyCart = () => {
                   </p>
                 </details>
                 <details className="group p-6 [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-brand-primary">
+                  <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-brand-primary dark:text-yellow-400">
                     <h2 className="text-lg font-medium">
                       Can I trade in my current vehicle?
                     </h2>
@@ -282,7 +285,7 @@ const MyCart = () => {
                     </span>
                   </summary>
 
-                  <p className="mt-4 leading-relaxed text-gray-700">
+                  <p className="mt-4 leading-relaxed text-gray-700 dark:text-white">
                     Absolutely! We accept trade-ins as part of your car
                     purchase. Our team can assess your vehicle&apos;s value, and
                     the trade-in value can be used as a down payment or to
@@ -296,7 +299,7 @@ const MyCart = () => {
         </div>
       ) : (
         <div className="container mx-auto px-6 lg:px-8 text-center py-24">
-          <h2 className="font-bold text-2xl md:text-5xl font-rajdhani text-brand-primary">
+          <h2 className="font-bold text-2xl md:text-5xl font-rajdhani text-brand-primary dark:text-yellow-400">
             No available cart item were found.
           </h2>
           <h4 className="font-medium md:text-3xl  my-2">
@@ -304,12 +307,12 @@ const MyCart = () => {
           </h4>
           <div className="flex gap-6 mt-4 justify-center">
             <Link to={"/brands"}>
-              <button className="bg-brand-primary  hover:bg-black hover:scale-105 duration-300 text-white font-medium  md:text-lg  py-3 px-6 rounded-md flex justify-center items-center">
+              <button className="bg-brand-primary dark:hover:bg-yellow-400 dark:hover:text-black hover:bg-black hover:scale-105 duration-300 text-white font-medium  md:text-lg  py-3 px-6 rounded-md flex justify-center items-center">
                 Show Product
               </button>
             </Link>
             <Link to="/">
-              <button className="bg-brand-primary  hover:bg-black hover:scale-105 duration-300 text-white font-medium  md:text-lg  py-3 px-6 rounded-md flex justify-center items-center">
+              <button className="bg-brand-primary dark:hover:bg-yellow-400 dark:hover:text-black hover:bg-black hover:scale-105 duration-300 text-white font-medium  md:text-lg  py-3 px-6 rounded-md flex justify-center items-center">
                 Back To Home
               </button>
             </Link>

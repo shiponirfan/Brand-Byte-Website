@@ -24,6 +24,16 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
+
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").classList.add(localTheme);
+  }, [theme]);
+
   // SignIn With Email & Password
   const signIn = (email, password) => {
     setLoading(true);
@@ -84,6 +94,8 @@ const AuthProvider = ({ children }) => {
     logOut,
     loading,
     userProfile,
+    setTheme,
+    theme,
   };
   return (
     // <HelmetProvider>

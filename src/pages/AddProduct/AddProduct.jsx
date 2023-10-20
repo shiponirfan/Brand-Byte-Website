@@ -60,13 +60,13 @@ const AddProduct = () => {
   };
 
   return (
-    <div>
+    <div className="dark:bg-gray-900 dark:text-white">
       <Breadcrumbs
         image={image}
         name={name}
         breadCrumbs={breadCrumbs}
       ></Breadcrumbs>
-      <div className="container mx-auto px-6 flex flex-col lg:flex-row gap-12 items-center justify-between lg:px-8 py-16 lg:py-20 xl:py-24">
+      <div className="container  mx-auto px-6 flex flex-col lg:flex-row gap-12 items-center justify-between lg:px-8 py-16 lg:py-20 xl:py-24">
         <div className="lg:w-1/2">
           <form onSubmit={handleAddProduct}>
             <div className="">
@@ -83,14 +83,14 @@ const AddProduct = () => {
                     type="text"
                     name="car_name"
                     id="car_name"
-                    className="input input-bordered input-primary focus:outline-none w-full"
+                    className="input input-bordered input-primary focus:outline-none w-full dark:bg-gray-900 dark:border-white"
                     placeholder="Enter Car Name"
                   />
                 </div>
                 <div className="w-1/2">
                   <label
                     htmlFor="brand_name"
-                    className="label text-sm md:text-base font-bold"
+                    className="label text-sm md:text-base font-bold "
                   >
                     Brand Name
                   </label>
@@ -98,7 +98,7 @@ const AddProduct = () => {
                     required
                     onChange={(event) => setBrandName(event.target.value)}
                     defaultValue={brandName}
-                    className="select select-primary w-full focus:outline-none"
+                    className="select select-primary w-full focus:outline-none dark:bg-gray-900 dark:border-white"
                     id="brand_name"
                   >
                     <option value="">Choose Car Brand</option>
@@ -122,7 +122,7 @@ const AddProduct = () => {
                   <select
                     required
                     onChange={(event) => setCategory(event.target.value)}
-                    className="select select-primary w-full focus:outline-none"
+                    className="select select-primary w-full focus:outline-none dark:bg-gray-900 dark:border-white"
                     id="category"
                   >
                     <option value="">Choose Car Category</option>
@@ -152,7 +152,7 @@ const AddProduct = () => {
                     type="text"
                     name="price"
                     id="price"
-                    className="input input-bordered input-primary focus:outline-none w-full"
+                    className="input input-bordered input-primary focus:outline-none w-full dark:bg-gray-900 dark:border-white"
                     placeholder="$ Price"
                   />
                 </div>
@@ -170,7 +170,7 @@ const AddProduct = () => {
                     type="text"
                     name="photo_url"
                     id="photo_url"
-                    className="input input-bordered input-primary focus:outline-none w-full"
+                    className="input input-bordered input-primary focus:outline-none w-full dark:bg-gray-900 dark:border-white"
                     placeholder="Past Car Photo URL"
                   />
                 </div>
@@ -187,7 +187,7 @@ const AddProduct = () => {
                   <textarea
                     id="description"
                     name="description"
-                    className="textarea textarea-primary w-full focus:outline-none"
+                    className="textarea textarea-primary w-full focus:outline-none dark:bg-gray-900 dark:border-white"
                     placeholder="Add Description"
                   ></textarea>
                 </div>
@@ -208,7 +208,7 @@ const AddProduct = () => {
                 />
               </div>
               <div>
-                <button className="bg-brand-primary hover:bg-black duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center w-full">
+                <button className="bg-brand-primary dark:hover:bg-yellow-400 dark:hover:text-black hover:bg-black duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center w-full">
                   Add Product
                 </button>
               </div>

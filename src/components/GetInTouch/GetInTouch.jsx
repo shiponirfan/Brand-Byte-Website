@@ -36,7 +36,7 @@ const GetInTouch = () => {
                   enrich your journey.
                 </p>
                 <div className="mb-8 flex w-full max-w-[370px]">
-                  <div className="bg-brand-primary  mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
+                  <div className="bg-brand-primary   mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="24"
                       height="24"
@@ -56,7 +56,7 @@ const GetInTouch = () => {
                   </div>
                 </div>
                 <div className="mb-8 flex w-full max-w-[370px]">
-                  <div className="bg-brand-primary  mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
+                  <div className="bg-brand-primary    mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="24"
                       height="26"
@@ -76,7 +76,7 @@ const GetInTouch = () => {
                   </div>
                 </div>
                 <div className="mb-8 flex w-full max-w-[370px]">
-                  <div className="bg-brand-primary  mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
+                  <div className="bg-brand-primary   mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="28"
                       height="19"
@@ -98,34 +98,34 @@ const GetInTouch = () => {
               </div>
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-              <div className="relative rounded-lg bg-white  p-8 shadow-lg sm:p-12">
+              <div className="relative rounded-lg bg-white  dark:bg-gray-900  p-8 shadow-lg sm:p-12">
                 <form onSubmit={handleGetInTouch}>
                   <div className="mb-6">
                     <input
                       type="text"
                       placeholder="Your Name"
-                      className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                      className="text-body-color border-[f0f0f0] dark:bg-gray-900 focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                     />
                   </div>
                   <div className="mb-6">
                     <input
                       type="email"
                       placeholder="Your Email"
-                      className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                      className="text-body-color border-[f0f0f0] dark:bg-gray-900 focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                     />
                   </div>
                   <div className="mb-6">
                     <input
                       type="text"
                       placeholder="Your Phone"
-                      className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                      className="text-body-color border-[f0f0f0] dark:bg-gray-900 focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                     />
                   </div>
                   <div className="mb-6">
                     <textarea
                       rows="6"
                       placeholder="Your Message"
-                      className="text-body-color border-[f0f0f0] focus:border-primary w-full resize-none rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                      className="text-body-color border-[f0f0f0] dark:bg-gray-900 focus:border-primary w-full resize-none rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                     ></textarea>
                   </div>
                   <div>

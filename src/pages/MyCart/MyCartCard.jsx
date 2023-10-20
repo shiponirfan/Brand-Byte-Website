@@ -35,7 +35,7 @@ const MyCartCard = ({ cartItem, setCartItems, cartItems }) => {
       });
   };
   return (
-    <div className="flex flex-col md:flex-row gap-4 md:gap-8 p-6 mb-4 md:items-center rounded-lg shadow-lg hover:shadow-brand-primary/50 duration-300 text-base xl:text-lg">
+    <div className="flex flex-col md:flex-row gap-4 md:gap-8 p-6 mb-4 md:items-center rounded-lg shadow-lg dark:shadow-gray-950 border border-transparent dark:border dark:border-yellow-400 hover:shadow-brand-primary/50 duration-300 text-base xl:text-lg">
       <div className="xl:w-64 md:w-40  h-56 md:h-32">
         <img
           className="rounded-lg w-full h-full object-cover"
@@ -45,7 +45,7 @@ const MyCartCard = ({ cartItem, setCartItems, cartItems }) => {
       </div>
       <div className="space-y-1 md:w-2/5">
         <Link to={`/product/${_id}`}>
-          <h2 className="font-bold text-brand-primary text-xl xl:text-2xl font-rajdhani">
+          <h2 className="font-bold dark:text-yellow-400 text-brand-primary text-xl xl:text-2xl font-rajdhani">
             {carName}
           </h2>
         </Link>
@@ -76,7 +76,7 @@ const MyCartCard = ({ cartItem, setCartItems, cartItems }) => {
       <div className="justify-end ">
         <button
           onClick={handleRemove}
-          className="bg-brand-primary hover:bg-black hover:scale-105 duration-300 text-white font-medium  text-lg  py-3 xl:px-6 px-3 rounded-md flex justify-center items-center"
+          className="bg-brand-primary dark:hover:bg-yellow-400 dark:hover:text-black hover:bg-black hover:scale-105 duration-300 text-white font-medium  text-lg  py-3 xl:px-6 px-3 rounded-md flex justify-center items-center"
         >
           <BsFillTrashFill className="mr-1" /> Remove
         </button>

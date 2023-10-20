@@ -61,7 +61,7 @@ const UpdateProduct = () => {
   };
 
   return (
-    <div>
+    <div className="dark:bg-gray-900 dark:text-white">
       <Breadcrumbs
         image={image}
         name={name}
@@ -84,7 +84,7 @@ const UpdateProduct = () => {
                     type="text"
                     name="car_name"
                     id="car_name"
-                    className="input input-bordered input-primary focus:outline-none w-full"
+                    className="input input-bordered input-primary focus:outline-none w-full dark:bg-gray-900 dark:border-white"
                     placeholder="Enter Car Name"
                     defaultValue={loadedProduct.carName}
                   />
@@ -100,7 +100,7 @@ const UpdateProduct = () => {
                     required
                     onChange={(event) => setBrandName(event.target.value)}
                     defaultValue={loadedProduct.brandName}
-                    className="select select-primary w-full focus:outline-none"
+                    className="select select-primary w-full focus:outline-none dark:bg-gray-900 dark:border-white"
                     id="brand_name"
                   >
                     <option value="">Choose Car Brand</option>
@@ -125,7 +125,7 @@ const UpdateProduct = () => {
                     required
                     defaultValue={loadedProduct.category}
                     onChange={(event) => setCategory(event.target.value)}
-                    className="select select-primary w-full focus:outline-none"
+                    className="select select-primary w-full focus:outline-none dark:bg-gray-900 dark:border-white"
                     id="category"
                   >
                     <option value="">Choose Car Category</option>
@@ -146,7 +146,7 @@ const UpdateProduct = () => {
                 <div className="w-1/2">
                   <label
                     htmlFor="price"
-                    className="label text-sm md:text-base font-bold"
+                    className="label text-sm md:text-base font-bold "
                   >
                     Price
                   </label>
@@ -155,8 +155,8 @@ const UpdateProduct = () => {
                     type="text"
                     name="price"
                     id="price"
-                    defaultValue={loadedProduct.price}
-                    className="input input-bordered input-primary focus:outline-none w-full"
+                    defaultValue={loadedProduct.price} 
+                    className="input input-bordered input-primary focus:outline-none w-full dark:bg-gray-900 dark:border-white"
                     placeholder="$ Price"
                   />
                 </div>
@@ -175,7 +175,7 @@ const UpdateProduct = () => {
                     type="text"
                     name="photo_url"
                     id="photo_url"
-                    className="input input-bordered input-primary focus:outline-none w-full"
+                    className="input input-bordered input-primary focus:outline-none w-full dark:bg-gray-900 dark:border-white"
                     placeholder="Past Car Photo URL"
                   />
                 </div>
@@ -193,7 +193,7 @@ const UpdateProduct = () => {
                     id="description"
                     name="description"
                     defaultValue={loadedProduct.description}
-                    className="textarea textarea-primary w-full focus:outline-none"
+                    className="textarea textarea-primary w-full focus:outline-none dark:bg-gray-900 dark:border-white"
                     placeholder="Add Description"
                   ></textarea>
                 </div>
@@ -214,7 +214,7 @@ const UpdateProduct = () => {
                 />
               </div>
               <div>
-                <button className="bg-brand-primary hover:bg-black duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center w-full">
+                <button className="bg-brand-primary dark:hover:bg-yellow-400 dark:hover:text-black hover:bg-black duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center w-full">
                   Update Product
                 </button>
               </div>

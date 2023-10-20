@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 const BrandShowcase = () => {
   return (
     <div className="bg-blue-600/10 py-10">
-      <div className="container mx-auto px-5 lg:px-8 flex justify-between items-center ">
+      <div className="container mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center ">
         <div>
-          <h2 className="text-6xl font-bold font-rajdhani uppercase">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold font-rajdhani uppercase">
             <span className="text-brand-primary">Premier Auto</span> <br />{" "}
             Brand Showcase
           </h2>
@@ -18,7 +18,7 @@ const BrandShowcase = () => {
             </button>
           </Link>
         </div>
-        <div>
+        <div className="md:w-2/4">
           <img src="/src/assets/images/bmwcar.png" alt="BMW Car" />
         </div>
       </div>

@@ -7,12 +7,12 @@ const Discount = () => {
       style={{ backgroundImage: "url(/src/assets/images/discount.jpg)" }}
     >
       <div className="hero-overlay bg-opacity-60 "></div>
-      <div className="container mx-auto px-5 py-36 text-center lg:px-8 text-white">
+      <div className="container mx-auto px-5 py-20 md:py-24 xl:py-36 text-center lg:px-8 text-white">
         <div className="max-w-5xl mx-auto">
-          <h1 className="mb-5 text-7xl font-rajdhani font-bold uppercase">
+          <h1 className="mb-5 text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-rajdhani font-bold uppercase">
             Discount up to 30% only this month for new member
           </h1>
-          <p className="mb-5 max-w-2xl mx-auto">
+          <p className="mb-5 max-w-lg lg:max-w-2xl mx-auto">
             Explore iconic brands in technology, autos, and more, redefining
             innovation and excellence, all in one place for you.
           </p>

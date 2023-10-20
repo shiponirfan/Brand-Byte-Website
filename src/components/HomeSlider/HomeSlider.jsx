@@ -43,9 +43,9 @@ const HomeSlider = () => {
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="container mx-auto px-5 lg:px-8 text-white">
+            <div className="container mx-auto  px-6 lg:px-28 xl:px-8 text-white">
               <div className="max-w-2xl">
-                <h1 className="mb-5 text-6xl font-rajdhani font-bold uppercase">
+                <h1 className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase">
                   Discover Iconic Brands
                 </h1>
                 <p className="mb-5 max-w-lg">
@@ -71,9 +71,9 @@ const HomeSlider = () => {
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="container mx-auto px-5 lg:px-8 text-white">
+            <div className="container mx-auto px-6 lg:px-28 xl:px-8 text-white">
               <div className="max-w-2xl">
-                <h1 className="mb-5 text-6xl font-rajdhani font-bold uppercase">
+                <h1 className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase">
                   The Pinnacle of Innovation
                 </h1>
                 <p className="mb-5 max-w-lg">
@@ -99,9 +99,9 @@ const HomeSlider = () => {
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="container mx-auto px-5 lg:px-8 text-white">
+            <div className="container mx-auto px-6 lg:px-28 xl:px-8 text-white">
               <div className="max-w-2xl">
-                <h1 className="mb-5 text-6xl font-rajdhani font-bold uppercase">
+                <h1 className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase">
                   Brand Excellence Unveiled
                 </h1>
                 <p className="mb-5 max-w-lg">
@@ -127,9 +127,9 @@ const HomeSlider = () => {
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="container mx-auto px-5 lg:px-8 text-white">
+            <div className="container mx-auto px-6 lg:px-28 xl:px-8 text-white">
               <div className="max-w-2xl">
-                <h1 className="mb-5 text-6xl font-rajdhani font-bold uppercase">
+                <h1 className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase">
                   Legendary Names, Exceptional Choices
                 </h1>
                 <p className="mb-5 max-w-lg">
@@ -155,9 +155,9 @@ const HomeSlider = () => {
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="container mx-auto px-5 lg:px-8 text-white">
+            <div className="container mx-auto px-6 lg:px-28 xl:px-8 text-white">
               <div className="max-w-2xl">
-                <h1 className="mb-5 text-6xl font-rajdhani font-bold uppercase">
+                <h1 className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase">
                   Your Gateway to Top Brands
                 </h1>
                 <p className="mb-5 max-w-lg">
@@ -173,10 +173,10 @@ const HomeSlider = () => {
             </div>
           </div>
         </SwiperSlide>
-        <div className="absolute top-1/2 -translate-y-1/2 -right-20 group-hover:right-6 rounded-md text-2xl cursor-pointer hover:bg-brand-primary hover:text-white duration-300 bg-white p-4 z-10 swiper-button-next">
+        <div className="absolute hidden lg:block top-1/2 -translate-y-1/2 -right-20 group-hover:right-6 rounded-md text-2xl cursor-pointer hover:bg-brand-primary hover:text-white duration-300 bg-white p-4 z-10 swiper-button-next">
           <HiOutlineArrowNarrowRight />
         </div>
-        <div className="absolute top-1/2 -left-20  -translate-y-1/2 group-hover:left-6 rounded-md text-2xl cursor-pointer hover:bg-brand-primary hover:text-white duration-300 bg-white p-4 z-10 swiper-button-prev">
+        <div className="absolute hidden lg:block top-1/2 -left-20  -translate-y-1/2 group-hover:left-6 rounded-md text-2xl cursor-pointer hover:bg-brand-primary hover:text-white duration-300 bg-white p-4 z-10 swiper-button-prev">
           <HiOutlineArrowNarrowLeft />
         </div>
       </Swiper>

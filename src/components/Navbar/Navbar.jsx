@@ -35,40 +35,59 @@ const Navbar = () => {
   };
   const navLinks = (
     <>
-      <li className="hover:text-brand-secondary duration-300">
-        <NavLink to="/" className={({ isActive, isPending }) =>
+      <li className="hover:text-brand-secondary duration-300 ">
+        <NavLink
+          to="/"
+          className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-brand-primary" : ""
-          }>Home</NavLink>
+          }
+        >
+          Home
+        </NavLink>
+      </li>
+      <li className="hover:text-brand-secondary duration-300 ">
+        <NavLink
+          to="/brands"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-brand-primary" : ""
+          }
+        >
+          Brands
+        </NavLink>
+      </li>
+      <li className="hover:text-brand-secondary duration-300 ">
+        <NavLink
+          to="/addProduct"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-brand-primary" : ""
+          }
+        >
+          Add Product
+        </NavLink>
       </li>
       <li className="hover:text-brand-secondary duration-300">
-        <NavLink to="/brands" className={({ isActive, isPending }) =>
+        <NavLink
+          to="/myCart"
+          className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-brand-primary" : ""
-          }>Brands</NavLink>
+          }
+        >
+          My Cart
+        </NavLink>
       </li>
-      <li className="hover:text-brand-secondary duration-300">
-        <NavLink to="/addProduct" className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-brand-primary" : ""
-          }>Add Product</NavLink>
-      </li>
-      <li className="hover:text-brand-secondary duration-300">
-        <NavLink to="/myCart" className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-brand-primary" : ""
-          }>My Cart</NavLink>
-      </li>
-      
     </>
   );
   return (
     <div className="shadow-md">
-      <div className="bg-brand-primary py-2">
-        <div className="container mx-auto px-5 lg:px-8 flex justify-between items-center text-white">
-          <div className="flex justify-between items-center gap-2">
+      <div className="bg-brand-primary py-2 hidden md:block">
+        <div className="container mx-auto px-6 lg:px-8 flex flex-col lg:flex-row lg:justify-between items-center text-white">
+          <div className="flex text-xs md:text-base lg:justify-between items-center gap-2">
             <BiPhoneCall />
             <span>+8801710467100</span>
             <BiMap />
             <span>Rangpur Sadar, Bangladesh</span>
           </div>
-          <div className="flex justify-between items-center gap-2">
+          <div className="flex text-xs md:text-base lg:justify-between items-center gap-2">
             <GoMail />
             <span>shiponirfan.dev@gmail.com</span>
             <BiTimeFive />
@@ -76,10 +95,13 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto px-5 lg:px-8 navbar py-4">
+      <div className="container mx-auto px-6 lg:px-8 navbar py-4">
         <div className="justify-start flex-grow">
-          <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+          <div className="dropdown z-20">
+            <label
+              tabIndex={0}
+              className="btn btn-ghost  px-1 md:pr-3 lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -97,13 +119,13 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content border-2 border-brand-primary  mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navLinks}
             </ul>
           </div>
           <Link to="/">
-            <img className="w-64" src={logo} alt="Brand Byte Logo" />
+            <img className="md:w-64 w-36" src={logo} alt="Brand Byte Logo" />
           </Link>
           <div className="ml-8 hidden lg:flex">
             <ul className="menu-horizontal font-medium text-lg space-x-5 px-1">
@@ -118,7 +140,7 @@ const Navbar = () => {
                 tabIndex={0}
                 className="group  cursor-pointer duration-300 hover:text-brand-primary flex justify-center items-center border-2 hover:border-brand-primary rounded-full pr-2"
               >
-                <label className="w-14 avatar cursor-pointer align-bottom">
+                <label className="md:w-14 w-11 avatar cursor-pointer align-bottom">
                   <div className="rounded-full ring-2 duration-300 group-hover:ring-brand-primary ring-gray-200">
                     {user?.photoURL ? (
                       <img src={user?.photoURL} />
@@ -128,7 +150,7 @@ const Navbar = () => {
                   </div>
                 </label>
                 {user?.displayName ? (
-                  <h2 className="font-semibold text-lg ml-2">
+                  <h2 className="font-semibold text-xs md:text-lg ml-2">
                     {user?.displayName}
                   </h2>
                 ) : (
@@ -284,7 +306,7 @@ const Navbar = () => {
             </div>
           ) : (
             <Link to="/login">
-              <button className="bg-brand-primary hover:bg-brand-secondary duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
+              <button className="bg-brand-primary hover:bg-brand-secondary duration-300 text-white font-medium  text-base  md:text-lg  py-2 px-5 md:py-3 md:px-6 rounded-md flex justify-center items-center">
                 <BiLogIn className="mr-1" /> Login
               </button>
             </Link>

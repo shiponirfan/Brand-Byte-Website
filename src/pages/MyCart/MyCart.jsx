@@ -46,8 +46,8 @@ const MyCart = () => {
       ></Breadcrumbs>
       {cartItems.length > 0 ? (
         <div>
-          <div className="container mx-auto px-6 flex gap-8 lg:px-8 py-24 ">
-            <div className="w-2/3">
+          <div className="container mx-auto px-6 flex flex-col  lg:flex-row gap-8 lg:px-8 py-16 lg:py-20 xl:py-24 ">
+            <div className="lg:w-2/3">
               {cartItems.map((cartItem) => (
                 <MyCartCard
                   key={cartItem._id}
@@ -57,7 +57,7 @@ const MyCart = () => {
                 ></MyCartCard>
               ))}
             </div>
-            <div className="w-1/3">
+            <div className="lg:w-1/3">
               <div
                 className="bg-brand-primary text-white text-center rounded-lg  mb-8 bg-center bg-cover"
                 style={{
@@ -69,7 +69,7 @@ const MyCart = () => {
                   onClick={handleCheckout}
                   className="bg-black bg-opacity-80 py-12 rounded-lg"
                 >
-                  <button className="bg-brand-primary hover:bg-white hover:text-brand-primary hover:scale-105 duration-300 mx-auto text-white font-medium  text-xl  py-5 px-14 rounded-md flex justify-center items-center">
+                  <button className="bg-brand-primary hover:bg-white hover:text-brand-primary hover:scale-105 duration-300 mx-auto text-white font-medium  text-xl  py-4 xl:py-5 xl:px-14 px-10 rounded-md flex justify-center items-center">
                     Checkout
                   </button>
                 </div>
@@ -295,21 +295,21 @@ const MyCart = () => {
           <Discount></Discount>
         </div>
       ) : (
-        <div className="container mx-auto text-center py-24">
-          <h2 className="font-bold text-5xl font-rajdhani text-brand-primary">
+        <div className="container mx-auto px-6 lg:px-8 text-center py-24">
+          <h2 className="font-bold text-2xl md:text-5xl font-rajdhani text-brand-primary">
             No available cart item were found.
           </h2>
-          <h4 className="font-medium text-3xl  my-2">
+          <h4 className="font-medium md:text-3xl  my-2">
             If you wish, you can add a product to cart.
           </h4>
           <div className="flex gap-6 mt-4 justify-center">
             <Link to={"/brands"}>
-              <button className="bg-brand-primary  hover:bg-black hover:scale-105 duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
+              <button className="bg-brand-primary  hover:bg-black hover:scale-105 duration-300 text-white font-medium  md:text-lg  py-3 px-6 rounded-md flex justify-center items-center">
                 Show Product
               </button>
             </Link>
             <Link to="/">
-              <button className="bg-brand-primary  hover:bg-black hover:scale-105 duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
+              <button className="bg-brand-primary  hover:bg-black hover:scale-105 duration-300 text-white font-medium  md:text-lg  py-3 px-6 rounded-md flex justify-center items-center">
                 Back To Home
               </button>
             </Link>

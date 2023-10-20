@@ -38,7 +38,7 @@ const Products = () => {
           <DynamicProductsSlider
             bannerBrand={bannerBrand}
           ></DynamicProductsSlider>
-          <div className="container mx-auto px-6 lg:px-8 py-24 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="container mx-auto px-6 lg:px-8 py-10 md:py-16 lg:py-20 xl:py-24 grid md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
             {products.map((product) => (
               <ProductsCard key={product._id} product={product}></ProductsCard>
             ))}
@@ -47,21 +47,21 @@ const Products = () => {
           <Discount></Discount>
         </div>
       ) : (
-        <div className="container mx-auto text-center py-24">
-          <h2 className="font-bold text-5xl font-rajdhani text-brand-primary">
+        <div className="container mx-auto px-6 lg:px-8 text-center py-24">
+          <h2 className="font-bold text-2xl md:text-5xl font-rajdhani text-brand-primary">
             No available products were found.
           </h2>
-          <h4 className="font-medium text-3xl  my-2">
+          <h4 className="font-medium md:text-3xl  my-2">
             If you wish, you can add a product.
           </h4>
           <div className="flex gap-6 mt-4 justify-center">
             <Link to={"/addProduct"}>
-              <button className="bg-brand-primary  hover:bg-black hover:scale-105 duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
+              <button className="bg-brand-primary  hover:bg-black hover:scale-105 duration-300 text-white font-medium  md:text-lg  py-3 px-6 rounded-md flex justify-center items-center">
                 Add Product
               </button>
             </Link>
             <Link to="/">
-              <button className="bg-brand-primary  hover:bg-black hover:scale-105 duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
+              <button className="bg-brand-primary  hover:bg-black hover:scale-105 duration-300 text-white font-medium  md:text-lg   py-3 px-6 rounded-md flex justify-center items-center">
                 Back To Home
               </button>
             </Link>

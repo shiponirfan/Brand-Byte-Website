@@ -67,13 +67,16 @@ const UpdateProduct = () => {
         name={name}
         breadCrumbs={breadCrumbs}
       ></Breadcrumbs>
-      <div className="container mx-auto px-5 flex gap-12 justify-between lg:px-8 py-24">
-        <div className="w-1/2">
+      <div className="container mx-auto px-6 flex flex-col lg:flex-row gap-12 items-center justify-between lg:px-8 py-16 lg:py-20 xl:py-24">
+        <div className="lg:w-1/2">
           <form onSubmit={handleUpdateProduct}>
             <div className="">
               <div className="flex justify-between gap-6">
                 <div className="w-1/2">
-                  <label htmlFor="car_name" className="label font-bold">
+                  <label
+                    htmlFor="car_name"
+                    className="label text-sm md:text-base font-bold"
+                  >
                     Car Name
                   </label>
                   <input
@@ -87,7 +90,10 @@ const UpdateProduct = () => {
                   />
                 </div>
                 <div className="w-1/2">
-                  <label htmlFor="brand_name" className="label font-bold">
+                  <label
+                    htmlFor="brand_name"
+                    className="label text-sm md:text-base font-bold"
+                  >
                     Brand Name
                   </label>
                   <select
@@ -109,7 +115,10 @@ const UpdateProduct = () => {
               </div>
               <div className="flex justify-between gap-6">
                 <div className="w-1/2">
-                  <label htmlFor="category" className="label font-bold">
+                  <label
+                    htmlFor="category"
+                    className="label text-sm md:text-base font-bold"
+                  >
                     Select Category
                   </label>
                   <select
@@ -135,7 +144,10 @@ const UpdateProduct = () => {
                   </select>
                 </div>
                 <div className="w-1/2">
-                  <label htmlFor="price" className="label font-bold">
+                  <label
+                    htmlFor="price"
+                    className="label text-sm md:text-base font-bold"
+                  >
                     Price
                   </label>
                   <input
@@ -151,7 +163,10 @@ const UpdateProduct = () => {
               </div>
               <div className="flex justify-between gap-6">
                 <div className="grow">
-                  <label htmlFor="photo_url" className="label font-bold">
+                  <label
+                    htmlFor="photo_url"
+                    className="label text-sm md:text-base font-bold"
+                  >
                     Image URL
                   </label>
                   <input
@@ -168,7 +183,10 @@ const UpdateProduct = () => {
 
               <div className="flex justify-between gap-6">
                 <div className="grow">
-                  <label htmlFor="description" className="label font-bold">
+                  <label
+                    htmlFor="description"
+                    className="label text-sm md:text-base font-bold"
+                  >
                     Product Description
                   </label>
                   <textarea
@@ -181,7 +199,10 @@ const UpdateProduct = () => {
                 </div>
               </div>
               <div className="grow flex items-center rounded-lg py-4 mb-2 gap-2 ">
-                <label htmlFor="car_name" className=" font-bold">
+                <label
+                  htmlFor="car_name"
+                  className="text-xs text-center  md:text-base font-bold"
+                >
                   Give Rating Here
                 </label>
 
@@ -200,7 +221,7 @@ const UpdateProduct = () => {
             </div>
           </form>
         </div>
-        <div className="w-1/2">
+        <div className="lg:w-1/2">
           <img src="/src/assets/images/bmwcar.png" alt="car" />
         </div>
       </div>

@@ -19,8 +19,8 @@ const DynamicProductsSlider = ({ bannerBrand }) => {
       });
   }, [bannerBrand]);
   return (
-    <div className="container flex mx-auto pt-20  px-5 lg:px-8">
-      <div className="w-3/5">
+    <div className="container flex mx-auto pt-10 md:pt-16 xl:pt-20  px-5 lg:px-8">
+      <div className="md:w-3/5 w-full">
         <Swiper
           style={{
             "--swiper-pagination-color": "#fff",
@@ -80,32 +80,35 @@ const DynamicProductsSlider = ({ bannerBrand }) => {
       </div>
 
       <div
-        className="w-1/5 bg-cover bg-center"
+        className="w-1/5 hidden xl:block bg-cover bg-center"
         style={{
           backgroundImage:
             "url(/src/assets/images/home_slider/home_slider3.jpg)",
         }}
       >
-        <div className="hero-overlay flex flex-col justify-between h-full bg-opacity-80 text-white text-center p-8">
-          <h2 className="font-bold font-rajdhani text-6xl uppercase">
+        <div className="hero-overlay flex flex-col justify-center xl:justify-between h-full bg-opacity-80 text-white text-center p-8">
+          <h2 className="font-bold font-rajdhani lg:text-3xl xl:text-5xl 2xl:text-6xl uppercase">
             Find The <span className="text-yellow-500">Right Car</span> For You
           </h2>
           <p>Explore Iconic Brands</p>
-          <button className="border mt-4 font-rajdhani hover:scale-105 hover:bg-brand-secondary duration-300 text-white font-medium uppercase text-2xl  py-3 px-6 rounded-md flex justify-center items-center">
+          <button className="border mt-4 font-rajdhani hover:scale-105 hover:bg-brand-secondary duration-300 text-white font-medium uppercase xl:text-2xl  py-3 px-6 rounded-md flex justify-center items-center">
             Shop Now
           </button>
         </div>
       </div>
-      <div className="w-1/5 bg-brand-primary p-8">
-        <div className=" flex flex-col justify-between h-full bg-opacity-80 text-white ">
-          <h2 className="font-bold font-rajdhani text-5xl">
+      <div className="xl:w-1/5 md:block hidden bg-brand-primary p-8 ">
+        <div className=" flex flex-col justify-center xl:justify-between h-full bg-opacity-80 text-white ">
+          <h2 className="font-bold font-rajdhani xl:hidden text-2xl lg:text-4xl xl:text-5xl">
+            EXTRA 20% OFF EVERYDAY
+          </h2>
+          <h2 className="font-bold font-rajdhani hidden xl:block lg:text-3xl xl:text-5xl">
             EXTRA <br /> 20% OFF <br /> EVERYDAY
           </h2>
-          <h2 className="font-bold font-rajdhani text-2xl">
+          <h2 className="font-bold font-rajdhani hidden xl:block text-2xl">
             IF YOU SPEND $50,00+
           </h2>
           <p className="mt-2 ">Use the unique promo code sent to your email!</p>
-          <button className=" mt-4 font-rajdhani hover:scale-105  bg-black duration-300 text-white font-medium uppercase text-2xl border  border-black  py-3 px-6 rounded-md flex justify-center items-center">
+          <button className=" mt-4 font-rajdhani hover:scale-105   bg-black duration-300 text-white font-medium uppercase xl:text-2xl border  border-black  py-3 px-6 rounded-md flex justify-center items-center">
             Shop Now
           </button>
         </div>

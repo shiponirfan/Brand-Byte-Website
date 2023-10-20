@@ -3,28 +3,27 @@ const GetInTouch = () => {
   const handleGetInTouch = (e) => {
     e.preventDefault();
     Swal.fire({
-      title: 'Thank You',
-      text: 'Successfully Message Send',
-      icon: 'success',
-      confirmButtonText: 'Go Back',
+      title: "Thank You",
+      text: "Successfully Message Send",
+      icon: "success",
+      confirmButtonText: "Go Back",
       buttonsStyling: false,
-    })
+    });
   };
   return (
     <div
       className="bg-cover bg-no-repeat bg-bottom"
       style={{ backgroundImage: "url(/src/assets/images/GetInTouch.jpg)" }}
     >
-      {/* <!-- ====== Contact Section Start --> */}
       <section className="relative z-10 overflow-hidden bg-black bg-opacity-70 text-white py-20 lg:py-[120px]">
-        <div className="container mx-auto px-5 lg:px-8">
+        <div className="container mx-auto px-6 lg:px-8">
           <div className="-mx-4 flex flex-wrap lg:justify-between">
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
               <div className="mb-12 max-w-[570px] lg:mb-0">
                 <span className=" mb-4 block text-base font-semibold">
                   Contact Us
                 </span>
-                <h2 className="text-dark mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
+                <h2 className="text-dark font-rajdhani mb-6 text-2xl md:text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
                   GET IN TOUCH WITH US
                 </h2>
                 <p className="text-body-color mb-9 text-base leading-relaxed">
@@ -951,7 +950,6 @@ const GetInTouch = () => {
           </div>
         </div>
       </section>
-      {/* <!-- ====== Contact Section End --> */}
     </div>
   );
 };

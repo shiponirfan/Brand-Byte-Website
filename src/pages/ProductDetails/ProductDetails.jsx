@@ -90,8 +90,8 @@ const ProductDetails = () => {
         name={carName}
         breadCrumbs={breadCrumbs}
       ></Breadcrumbs>
-      <div className="container mx-auto px-5 lg:px-8 py-24 gap-8 flex justify-between">
-        <div className="w-2/3">
+      <div className="container mx-auto px-6 lg:px-8 py-10 md:py-16 lg:py-20 xl:py-24 gap-8 flex flex-col lg:flex-row justify-between">
+        <div className="lg:w-2/3">
           <div className="overflow-hidden rounded-lg">
             <img
               className="rounded-lg w-full hover:scale-105  duration-500"
@@ -100,7 +100,7 @@ const ProductDetails = () => {
             />
           </div>
           <div className="my-8">
-            <h2 className="font-bold text-5xl font-rajdhani text-brand-primary">
+            <h2 className="font-bold text-4xl md:text-5xl font-rajdhani text-brand-primary">
               {carName}
             </h2>
             <div className="flex  items-center gap-8 ">
@@ -110,7 +110,7 @@ const ProductDetails = () => {
               <h4 className="font-medium text-lg  my-2">
                 Category: <span className="font-bold">{category}</span>
               </h4>
-              <h4 className="font-medium text-lg  my-2 flex items-center gap-3">
+              <h4 className="font-medium text-lg  my-2 flex flex-col md:flex-row md:items-center gap-3">
                 Rating:{" "}
                 <Rating
                   style={{ maxWidth: 120 }}
@@ -128,7 +128,7 @@ const ProductDetails = () => {
           {/* Features */}
           <div className="mt-8">
             <h2 className="font-bold text-2xl">Features</h2>
-            <div className="flex  gap-20 mt-2">
+            <div className="flex flex-col md:flex-row md:gap-20 mt-2">
               <ul className="text-sm">
                 <li className="flex items-center">
                   <BsCheck className="text-2xl font-bold text-brand-primary" />{" "}
@@ -209,7 +209,7 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        <div className="w-1/3">
+        <div className="lg:w-1/3">
           <div
             className="bg-brand-primary text-white text-center rounded-lg  mb-8 bg-center bg-cover"
             style={{

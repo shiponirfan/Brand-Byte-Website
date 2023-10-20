@@ -16,30 +16,32 @@ const ProductsCard = ({ product }) => {
         <img
           alt={carName}
           src={photoUrl}
-          className="h-56 w-full rounded-md object-cover group-hover:scale-125 duration-500"
+          className="xl:h-56 h-40 w-full rounded-md object-cover group-hover:scale-125 duration-500"
         />
       </div>
       <div className="flex-grow flex flex-col  mt-6">
         <div className="space-y-1">
-          <h2 className="font-bold font-rajdhani text-3xl">{carName}</h2>
-          <h3 className="text-lg font-medium">
+          <h2 className="font-bold font-rajdhani text-xl xl:text-3xl">
+            {carName}
+          </h2>
+          <h3 className="xl:text-lg font-medium">
             Brand: <span className="text-brand-primary">{brandName}</span>
           </h3>
-          <h3 className="text-lg font-medium">
+          <h3 className="xl:text-lg font-medium">
             Category: <span className="text-brand-primary">{category}</span>
           </h3>
         </div>
-        <div className="mt-4 flex items-center justify-around gap-6 flex-grow ">
-          <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2 grow">
-            <BiCategoryAlt className="text-xl text-brand-primary" />
+        <div className="mt-4 flex flex-col space-y-2 xl:space-y-0 xl:flex-row xl:items-center text-sm justify-around 2xl:gap-6 flex-grow xl:text-xs">
+          <div className="sm:inline-flex flex items-center gap-2 sm:shrink-0 sm:items-center sm:gap-2 grow">
+            <BiCategoryAlt className="2xl:text-xl text-lg text-brand-primary" />
 
             <div className="mt-1.5 sm:mt-0">
-              <p className="text-gray-500">Category</p>
+              <p className="text-gray-500">Interior</p>
 
               <p className="font-medium">{category}</p>
             </div>
           </div>
-          <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2 grow">
+          <div className="sm:inline-flex flex items-center gap-2 sm:shrink-0 sm:items-center sm:gap-2 grow">
             <BiHeartCircle className="text-xl text-brand-primary" />
             <div className="mt-1.5 sm:mt-0">
               <p className="text-gray-500">Rating</p>
@@ -53,27 +55,29 @@ const ProductsCard = ({ product }) => {
             </div>
           </div>
 
-          <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2 grow">
+          <div className="sm:inline-flex flex items-center gap-2 sm:shrink-0 sm:items-center sm:gap-2 grow">
             <BiMoney className="text-xl text-brand-primary" />
 
             <div className="mt-1.5 sm:mt-0">
               <p className="text-gray-500">Price</p>
 
-              <p className="font-medium">${price.slice(0, 2)},{price.slice(2, 5)}</p>
+              <p className="font-medium">
+                ${price.slice(0, 2)},{price.slice(2, 5)}
+              </p>
             </div>
           </div>
         </div>
-        <div className="flex gap-6 mt-6 ">
+        <div className="flex gap-3 xl:gap-6 mt-6 ">
           <div className="flex-grow">
             <Link to={`/product/${_id}`}>
-              <button className="bg-brand-primary w-full hover:bg-black hover:scale-105 duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
+              <button className="bg-brand-primary w-full hover:bg-black hover:scale-105 duration-300 text-white font-medium   2xl:text-lg  py-3 px-2 xl:px-6 rounded-md flex justify-center items-center">
                 Show Details
               </button>
             </Link>
           </div>
           <div className="flex-grow">
             <Link to={`/updateProduct/${_id}`}>
-              <button className="bg-brand-primary w-full hover:bg-black hover:scale-105 duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
+              <button className="bg-brand-primary w-full hover:bg-black hover:scale-105 duration-300 text-white font-medium   2xl:text-lg  py-3 px-2 xl:px-6 rounded-md flex justify-center items-center">
                 Update Product
               </button>
             </Link>

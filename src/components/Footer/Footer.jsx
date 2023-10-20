@@ -8,8 +8,8 @@ import {
 } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className=" bg-gradient-to-r from-brand-primary to-blue-500 pt-24 pb-10  text-white">
-      <div className="grid gap-10 row-gap-6 mx-auto container px-5 lg:px-8 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+    <div className=" bg-gradient-to-r from-brand-primary to-blue-500 pt-16 lg:pt-24 pb-10  text-white">
+      <div className="grid gap-10 row-gap-6 mx-auto container px-6 lg:px-8 mb-8 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2">
           <Link to="/">
             <img
@@ -19,7 +19,7 @@ const Footer = () => {
             />
           </Link>
           <div className="mt-6 lg:max-w-sm">
-            <p className="text-base">
+            <p className="text-sm xl:text-base">
               Welcome to Brand Byte, your ultimate destination for a curated
               world of renowned brands. We pride ourselves in bringing you a
               diverse collection of exceptional products across the technology,
@@ -27,7 +27,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="space-y-2 text-base">
+        <div className="space-y-2 text-sm xl:text-base">
           <p className="text-2xl mb-4 font-bold tracking-wide font-rajdhani">
             Contacts
           </p>
@@ -63,7 +63,7 @@ const Footer = () => {
               title="Our address"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
             >
-              Rangpur Sadar, Bangladesh
+              Rangpur, Bangladesh
             </a>
           </div>
         </div>
@@ -115,11 +115,11 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col-reverse mx-auto container px-5 lg:px-8 justify-between pt-10  border-t lg:flex-row">
+      <div className="flex flex-col-reverse items-center  mx-auto container px-6 lg:px-8 justify-between pt-10  border-t lg:flex-row">
         <p className="text-sm ">
           © Copyright 2023 Brand Byte. All rights reserved.
         </p>
-        <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+        <ul className="flex gap-2 md:gap-0 mb-3  lg:mb-0  sm:space-x-5 ">
           <li>
             <span className="text-sm  transition-colors duration-300 hover:text-deep-purple-accent-400">
               F.A.Q

@@ -6,7 +6,7 @@ const BrandsCard = ({ brand }) => {
 
   return (
     <div className="relative group flex flex-col my-4 text-white shadow-md rounded-xl bg-clip-border bg-gradient-to-t from-brand-primary via-purple-500 to-pink-500">
-      <div className="relative h-56 mx-4 -mt-8 duration-300 group-hover:-mt-12 overflow-hidden shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-pink-400/50">
+      <div className="relative lg:h-36 xl:h-56 mx-4 -mt-8 duration-300 group-hover:-mt-12 overflow-hidden shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-pink-400/50">
         <img
           className="w-full h-full object-cover group-hover:scale-125 duration-300"
           src={brand_image}
@@ -14,9 +14,11 @@ const BrandsCard = ({ brand }) => {
         />
       </div>
       <div className="p-6 text-center flex justify-between items-center">
-        <h2 className="text-4xl font-rajdhani font-bold">{brand_name}</h2>
+        <h2 className="xl:text-4xl text-2xl font-rajdhani font-bold">
+          {brand_name}
+        </h2>
         <Link to={`/products/${brand_name}`}>
-          <button className="bg-white hover:bg-slate-100 duration-300 text-black  font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center ">
+          <button className="bg-white hover:bg-slate-100 duration-300 text-black  font-medium  text-lg  py-2 xl:py-3 px-3 xl:px-6 rounded-md flex justify-center items-center ">
             Show Cars
           </button>
         </Link>

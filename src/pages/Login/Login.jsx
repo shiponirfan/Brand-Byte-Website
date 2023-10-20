@@ -111,9 +111,9 @@ const Login = () => {
         name={"Login Here"}
         breadCrumbs={breadCrumbs}
       ></Breadcrumbs>
-      <div className="py-24 ">
-        <div className="container mx-auto flex gap-8 items-center">
-          <div className="w-1/2 ">
+      <div className="xl:py-24 lg:py-20 md:py-16 py-10">
+        <div className="container mx-auto px-6 lg:px-8 flex flex-col md:flex-row gap-8 items-center">
+          <div className="md:w-1/2 w-full ">
             <div className="w-full hover:border-brand-primary duration-300 max-w-sm mx-auto p-4  bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
               <img
                 className="w-48 mx-auto mb-2"
@@ -182,7 +182,7 @@ const Login = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/2">
+          <div className="md:w-1/2">
             <img src="/src/assets/images/bmwcar.png" alt="car" />
           </div>
         </div>

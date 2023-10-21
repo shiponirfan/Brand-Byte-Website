@@ -2,10 +2,10 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import ProductsCard from "./ProductsCard";
 import { useEffect } from "react";
-import DynamicProductsSlider from "../../components/DynamicProductsSlider";
 import BrandShowcase from "../../components/BrandShowcase/BrandShowcase";
 import Discount from "../../components/Discount/Discount";
 import { Helmet } from "react-helmet-async";
+import ProductsSlider from "../../components/ProductSlider/ProductSlider";
 
 const Products = () => {
   const products = useLoaderData();
@@ -38,9 +38,7 @@ const Products = () => {
 
       {products.length > 0 ? (
         <div>
-          <DynamicProductsSlider
-            bannerBrand={bannerBrand}
-          ></DynamicProductsSlider>
+          <ProductsSlider bannerBrand={bannerBrand}></ProductsSlider>
           <div className="container mx-auto dark:text-white px-6 lg:px-8 py-10 md:py-16 lg:py-20 xl:py-24 grid md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
             {products.map((product) => (
               <ProductsCard key={product._id} product={product}></ProductsCard>

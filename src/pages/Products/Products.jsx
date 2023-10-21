@@ -2,7 +2,7 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import ProductsCard from "./ProductsCard";
 import { useEffect } from "react";
-import DynamicProductsSlider from "../../components/DynamicProductsSlider/DynamicProductsSlider/DynamicProductsSlider";
+import DynamicProductsSlider from "../../components/DynamicProductsSlider";
 import BrandShowcase from "../../components/BrandShowcase/BrandShowcase";
 import Discount from "../../components/Discount/Discount";
 import { Helmet } from "react-helmet-async";

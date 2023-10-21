@@ -1,8 +1,16 @@
-# React + Vite
+# Brand Byte - Automotive Brand Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## [ Live Website link](https://brand-byte.web.app/)
 
-Currently, two official plugins are available:
+Click here for the Live Website URL: [https://brand-byte.web.app/](https://brand-byte.web.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Project Features
+
+- Website Have Login, Registration & Google Sign-Up Features
+- The website has Dark & Light Theme Features
+- After Login, The User Shows the Name and image On the Navbar
+- Logged-in users can Add or Update Products and store them in my cart and delete them from their cart
+- After Login, the Add Product, Update Product, Product Details, and My Cart Pages are visible to users otherwise they will be private
+- If no cart item or product is available the user shows a message and an add product button
+- Added AOS Animation For Better User Experience
+- Added 404 not found page

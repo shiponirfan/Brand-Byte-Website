@@ -3,6 +3,7 @@ import image from "../../assets/images/home_slider/home_slider3.jpg";
 import { Rating, Star } from "@smastrom/react-rating";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 const AddProduct = () => {
   const [rating, setRating] = useState(0);
   const [brandName, setBrandName] = useState("");
@@ -61,6 +62,9 @@ const AddProduct = () => {
 
   return (
     <div className="dark:bg-gray-900 dark:text-white">
+      <Helmet>
+        <title>Add Product | Brand Byte</title>
+      </Helmet>
       <Breadcrumbs
         image={image}
         name={name}
@@ -68,7 +72,7 @@ const AddProduct = () => {
       ></Breadcrumbs>
       <div className="container  mx-auto px-6 flex flex-col lg:flex-row gap-12 items-center justify-between lg:px-8 py-16 lg:py-20 xl:py-24">
         <div className="lg:w-1/2">
-          <form onSubmit={handleAddProduct}>
+          <form  data-aos="fade-right" data-aos-delay="100" onSubmit={handleAddProduct}>
             <div className="">
               <div className="flex justify-between gap-6">
                 <div className="w-1/2">
@@ -215,8 +219,8 @@ const AddProduct = () => {
             </div>
           </form>
         </div>
-        <div className="lg:w-1/2">
-          <img src="/src/assets/images/black-bmw-6.png" alt="" />
+        <div  className="lg:w-1/2">
+          <img data-aos="fade-left" data-aos-delay="200" src="/src/assets/images/black-bmw-6.png" alt="" />
         </div>
       </div>
     </div>

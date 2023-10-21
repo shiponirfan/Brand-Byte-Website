@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import BrandShowcase from "../../components/BrandShowcase/BrandShowcase";
 import BrandShowcase2 from "../../components/BrandShowcase/BrandShowcase2";
 import Brands from "../../components/Brands/Brands";
@@ -10,6 +11,9 @@ import "react-toastify/dist/ReactToastify.css";
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>Home | Brand Byte</title>
+      </Helmet>
       <HomeSlider></HomeSlider>
       <Brands></Brands>
       <BrandShowcase></BrandShowcase>

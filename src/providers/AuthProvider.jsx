@@ -10,16 +10,16 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { createContext, useEffect, useState } from "react";
-// import { HelmetProvider } from "react-helmet-async";
+import { HelmetProvider } from "react-helmet-async";
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
-  // useEffect(()=>{
-  //   AOS.init({duration: 1000,delay: 300,});
-  // },[])
+  useEffect(() => {
+    AOS.init({ duration: 1000, delay: 300 });
+  }, []);
 
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -98,9 +98,9 @@ const AuthProvider = ({ children }) => {
     theme,
   };
   return (
-    // <HelmetProvider>
-    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
-    // </HelmetProvider>
+    <HelmetProvider>
+      <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
+    </HelmetProvider>
   );
 };
 

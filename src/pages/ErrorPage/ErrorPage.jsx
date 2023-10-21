@@ -4,10 +4,14 @@ import error from "/src/assets/images/error.png";
 import errorDark from "/src/assets/images/errordark.png";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 const ErrorPage = () => {
   const { theme } = useContext(AuthContext);
   return (
     <div>
+      <Helmet>
+        <title>Error 404 | Brand Byte</title>
+      </Helmet>
       <Navbar></Navbar>
       <div className="grid min-h-home-h px-4 dark:bg-gray-900 place-content-center">
         <div className="text-center">

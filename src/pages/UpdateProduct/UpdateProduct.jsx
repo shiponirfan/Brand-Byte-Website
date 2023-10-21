@@ -4,6 +4,7 @@ import { Rating, Star } from "@smastrom/react-rating";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import { useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 const UpdateProduct = () => {
   const loadedProduct = useLoaderData();
 
@@ -62,14 +63,17 @@ const UpdateProduct = () => {
 
   return (
     <div className="dark:bg-gray-900 dark:text-white">
+      <Helmet>
+        <title>Update Product | Brand Byte</title>
+      </Helmet>
       <Breadcrumbs
         image={image}
         name={name}
         breadCrumbs={breadCrumbs}
       ></Breadcrumbs>
       <div className="container mx-auto px-6 flex flex-col lg:flex-row gap-12 items-center justify-between lg:px-8 py-16 lg:py-20 xl:py-24">
-        <div className="lg:w-1/2">
-          <form onSubmit={handleUpdateProduct}>
+        <div  className="lg:w-1/2">
+          <form data-aos="fade-right" data-aos-delay="100" onSubmit={handleUpdateProduct}>
             <div className="">
               <div className="flex justify-between gap-6">
                 <div className="w-1/2">
@@ -222,7 +226,7 @@ const UpdateProduct = () => {
           </form>
         </div>
         <div className="lg:w-1/2">
-          <img src="/src/assets/images/bmwcar.png" alt="car" />
+          <img data-aos="fade-left" data-aos-delay="300" src="/src/assets/images/bmwcar.png" alt="car" />
         </div>
       </div>
     </div>

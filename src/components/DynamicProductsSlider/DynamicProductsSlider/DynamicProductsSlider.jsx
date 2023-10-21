@@ -98,7 +98,7 @@ const DynamicProductsSlider = ({ bannerBrand }) => {
       </div>
       <div className="xl:w-1/5 md:block hidden bg-brand-primary p-8 ">
         <div className=" flex flex-col justify-center xl:justify-between h-full bg-opacity-80 text-white ">
-          <h2 className="font-bold font-rajdhani xl:hidden text-2xl lg:text-4xl xl:text-5xl">
+          <h2  className="font-bold font-rajdhani xl:hidden text-2xl lg:text-4xl xl:text-5xl">
             EXTRA 20% OFF EVERYDAY
           </h2>
           <h2 className="font-bold font-rajdhani hidden xl:block lg:text-3xl xl:text-5xl">

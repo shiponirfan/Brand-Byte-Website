@@ -9,7 +9,7 @@ const ChooseUs = () => {
     <div className="xl:py-24 lg:py-16 py-12 dark:bg-gray-900 dark:text-white">
       <div className="container mx-auto px-6 xl:px-3">
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-6xl font-bold font-rajdhani uppercase">
+          <h2 data-aos="fade-up" data-aos-delay="100" className="text-3xl md:text-6xl font-bold font-rajdhani uppercase">
             WHY
             <span className="text-brand-primary dark:text-yellow-400">
               {" "}
@@ -18,7 +18,7 @@ const ChooseUs = () => {
           </h2>
         </div>
         <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-6">
-          <div className="p-4 md:p-5 flex flex-col hover:bg-brand-primary hover:text-white bg-white border shadow-sm rounded-xl hover:shadow-md transition duration-300 dark:bg-slate-900 dark:border-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-gray-900">
+          <div data-aos="fade-up" data-aos-delay="200" className="p-4 md:p-5 flex flex-col hover:bg-brand-primary hover:text-white bg-white border shadow-sm rounded-xl hover:shadow-md transition duration-300 dark:bg-slate-900 dark:border-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-gray-900">
             <div className="flex items-center flex-grow">
               <FaMoneyBills className="text-8xl" />
               <div className="grow ml-5">
@@ -32,7 +32,7 @@ const ChooseUs = () => {
               </div>
             </div>
           </div>
-          <div className="p-4 md:p-5 flex flex-col hover:bg-brand-primary hover:text-white bg-white border shadow-sm rounded-xl hover:shadow-md transition duration-300 dark:bg-slate-900 dark:border-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-gray-900">
+          <div data-aos="fade-up" data-aos-delay="300" className="p-4 md:p-5 flex flex-col hover:bg-brand-primary hover:text-white bg-white border shadow-sm rounded-xl hover:shadow-md transition duration-300 dark:bg-slate-900 dark:border-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-gray-900">
             <div className="flex items-center flex-grow">
               <FaCar className="text-8xl" />
               <div className="grow ml-5">
@@ -46,7 +46,7 @@ const ChooseUs = () => {
               </div>
             </div>
           </div>
-          <div className="p-4 md:p-5 flex flex-col hover:bg-brand-primary hover:text-white bg-white border shadow-sm rounded-xl hover:shadow-md transition duration-300 dark:bg-slate-900 dark:border-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-gray-900">
+          <div data-aos="fade-up" data-aos-delay="400" className="p-4 md:p-5 flex flex-col hover:bg-brand-primary hover:text-white bg-white border shadow-sm rounded-xl hover:shadow-md transition duration-300 dark:bg-slate-900 dark:border-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-gray-900">
             <div className="flex items-center flex-grow">
               <FaShieldHeart className="text-8xl" />
               <div className="grow ml-5">
@@ -60,7 +60,7 @@ const ChooseUs = () => {
               </div>
             </div>
           </div>
-          <div className="p-4 md:p-5 flex flex-col hover:bg-brand-primary hover:text-white bg-white border shadow-sm rounded-xl hover:shadow-md transition duration-300 dark:bg-slate-900 dark:border-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-gray-900">
+          <div data-aos="fade-up" data-aos-delay="500" className="p-4 md:p-5 flex flex-col hover:bg-brand-primary hover:text-white bg-white border shadow-sm rounded-xl hover:shadow-md transition duration-300 dark:bg-slate-900 dark:border-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-gray-900">
             <div className="flex items-center flex-grow">
               <FaCalendarCheck className="text-8xl" />
               <div className="grow ml-5">

@@ -8,6 +8,7 @@ import logoWhite from "/src/assets/images/logo-white.png";
 import Swal from "sweetalert2";
 import Discount from "../../components/Discount/Discount";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 const MyCart = () => {
 
   const { user, theme } = useContext(AuthContext);
@@ -41,6 +42,9 @@ const MyCart = () => {
   };
   return (
     <div className="dark:bg-gray-900 dark:text-white">
+      <Helmet>
+        <title>My Cart | Brand Byte</title>
+      </Helmet>
       <ScrollToTopOnMount />
       <Breadcrumbs
         image={image}
@@ -62,6 +66,7 @@ const MyCart = () => {
             </div>
             <div className="lg:w-1/3">
               <div
+              data-aos="fade-up" data-aos-delay="100"
                 className="bg-brand-primary text-white text-center rounded-lg  mb-8 bg-center bg-cover"
                 style={{
                   backgroundImage:
@@ -77,7 +82,7 @@ const MyCart = () => {
                   </button>
                 </div>
               </div>
-              <div className="flow-root mb-8 dark:hover:border-yellow-400 hover:border-brand-primary duration-300 rounded-lg border border-gray-100 py-4 shadow-sm">
+              <div data-aos="fade-up" data-aos-delay="200" className="flow-root mb-8 dark:hover:border-yellow-400 hover:border-brand-primary duration-300 rounded-lg border border-gray-100 py-4 shadow-sm">
                 <dl className="-my-3 divide-y dark:divide-brand-primary divide-gray-100 text-base font-medium">
                   <div className="p-3 even:bg-gray-50 dark:even:bg-yellow-400 ">
                     <img
@@ -103,7 +108,7 @@ const MyCart = () => {
                   </div>
                 </dl>
               </div>
-              <div className="divide-y divide-gray-100 rounded-xl border hover:border-brand-primary border-gray-100 bg-white dark:bg-gray-900 dark:hover:border-yellow-400 ">
+              <div data-aos="fade-up" data-aos-delay="3100" className="divide-y divide-gray-100 rounded-xl border hover:border-brand-primary border-gray-100 bg-white dark:bg-gray-900 dark:hover:border-yellow-400 ">
                 <details
                   className="group p-6 [&_summary::-webkit-details-marker]:hidden"
                   open

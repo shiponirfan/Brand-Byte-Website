@@ -6,6 +6,7 @@ import { BsCheck } from "react-icons/bs";
 import Discount from "../../components/Discount/Discount";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const ProductDetails = () => {
   const product = useLoaderData();
@@ -84,6 +85,9 @@ const ProductDetails = () => {
 
   return (
     <div className="dark:bg-gray-900">
+      <Helmet>
+        <title>{carName} - Brand Byte</title>
+      </Helmet>
       <ScrollToTopOnMount />
       <Breadcrumbs
         image={photoUrl}
@@ -92,7 +96,11 @@ const ProductDetails = () => {
       ></Breadcrumbs>
       <div className="container mx-auto px-6 lg:px-8 py-10 md:py-16 lg:py-20 xl:py-24 gap-8 flex flex-col lg:flex-row justify-between">
         <div className="lg:w-2/3 dark:text-white">
-          <div className="overflow-hidden rounded-lg">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="overflow-hidden rounded-lg"
+          >
             <img
               className="rounded-lg w-full hover:scale-105  duration-500"
               src={photoUrl}
@@ -100,10 +108,18 @@ const ProductDetails = () => {
             />
           </div>
           <div className="my-8">
-            <h2 className="font-bold text-4xl md:text-5xl font-rajdhani text-brand-primary dark:text-yellow-400 ">
+            <h2
+              data-aos="fade-up"
+              data-aos-delay="200"
+              className="font-bold text-4xl md:text-5xl font-rajdhani text-brand-primary dark:text-yellow-400 "
+            >
               {carName}
             </h2>
-            <div className="flex  items-center gap-8 ">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="300"
+              className="flex  items-center gap-8 "
+            >
               <h4 className="font-medium text-lg  my-2">
                 Brand: <span className="font-bold">{brandName}</span>
               </h4>
@@ -121,12 +137,12 @@ const ProductDetails = () => {
               </h4>
             </div>
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-delay="400">
             <h2 className="font-bold text-2xl">Car Description</h2>
             <p className="mt-2 text-sm">{description}</p>
           </div>
           {/* Features */}
-          <div className="mt-8">
+          <div data-aos="fade-up" data-aos-delay="500" className="mt-8">
             <h2 className="font-bold text-2xl">Features</h2>
             <div className="flex flex-col md:flex-row md:gap-20 mt-2">
               <ul className="text-sm">
@@ -211,6 +227,8 @@ const ProductDetails = () => {
 
         <div className="lg:w-1/3">
           <div
+            data-aos="fade-up"
+            data-aos-delay="100"
             className="bg-brand-primary text-white text-center rounded-lg  mb-8 bg-center bg-cover"
             style={{
               backgroundImage:
@@ -231,7 +249,11 @@ const ProductDetails = () => {
               </button>
             </div>
           </div>
-          <div className="flow-root mb-8 dark:text-white dark:hover:border-yellow-400 hover:border-brand-primary duration-300 rounded-lg border border-gray-100 py-4 shadow-sm">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="flow-root mb-8 dark:text-white dark:hover:border-yellow-400 hover:border-brand-primary duration-300 rounded-lg border border-gray-100 py-4 shadow-sm"
+          >
             <dl className="-my-3 divide-y  divide-gray-100 dark:divide-brand-primary text-base font-medium">
               <div className="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 dark:even:bg-brand-primary sm:grid-cols-3 sm:gap-4">
                 <dt className="font-bold ">Brand</dt>
@@ -293,7 +315,11 @@ const ProductDetails = () => {
               </div>
             </dl>
           </div>
-          <div className="divide-y divide-gray-100 rounded-xl border hover:border-brand-primary border-gray-100 bg-white dark:bg-gray-900 dark:hover:border-yellow-400 ">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            className="divide-y divide-gray-100 rounded-xl border hover:border-brand-primary border-gray-100 bg-white dark:bg-gray-900 dark:hover:border-yellow-400 "
+          >
             <details
               className="group p-6 [&_summary::-webkit-details-marker]:hidden"
               open

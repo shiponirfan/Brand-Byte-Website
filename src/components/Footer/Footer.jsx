@@ -13,13 +13,19 @@ const Footer = () => {
         <div className="sm:col-span-2">
           <Link to="/">
             <img
+              data-aos="fade-right"
+              data-aos-delay="100"
               className="w-64"
               src="/src/assets/images/logo-white.png"
               alt="logo"
             />
           </Link>
           <div className="mt-6 lg:max-w-sm">
-            <p className="text-sm xl:text-base">
+            <p
+              data-aos="fade-right"
+              data-aos-delay="200"
+              className="text-sm xl:text-base"
+            >
               Welcome to Brand Byte, your ultimate destination for a curated
               world of renowned brands. We pride ourselves in bringing you a
               diverse collection of exceptional products across the technology,
@@ -28,10 +34,14 @@ const Footer = () => {
           </div>
         </div>
         <div className="space-y-2 text-sm xl:text-base">
-          <p className="text-2xl mb-4 font-bold tracking-wide font-rajdhani">
+          <p
+            data-aos="fade-up"
+            data-aos-delay="300"
+            className="text-2xl mb-4 font-bold tracking-wide font-rajdhani"
+          >
             Contacts
           </p>
-          <div className="flex">
+          <div data-aos="fade-up" data-aos-delay="400" className="flex">
             <p className="mr-1">Phone:</p>
             <a
               href="tel:+8801710467100"
@@ -42,7 +52,7 @@ const Footer = () => {
               +8801710467100
             </a>
           </div>
-          <div className="flex">
+          <div data-aos="fade-up" data-aos-delay="400" className="flex">
             <p className="mr-1 ">Email:</p>
             <a
               href="mailto:shiponirfan.dev@gmail.com"
@@ -53,7 +63,7 @@ const Footer = () => {
               shiponirfan.dev@gmail.com
             </a>
           </div>
-          <div className="flex">
+          <div data-aos="fade-up" data-aos-delay="500" className="flex">
             <p className="mr-1 ">Address:</p>
             <a
               href="https://www.google.com/maps"
@@ -68,10 +78,18 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <span className="text-2xl mb-4 font-bold tracking-wide font-rajdhani">
+          <span
+            data-aos="fade-up"
+            data-aos-delay="600"
+            className="text-2xl mb-4 font-bold tracking-wide font-rajdhani"
+          >
             Social
           </span>
-          <div className="flex items-center  text-2xl mt-4 space-x-3">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="700"
+            className="flex items-center  text-2xl mt-4 space-x-3"
+          >
             <a
               target="_blank"
               rel="noreferrer"
@@ -108,7 +126,7 @@ const Footer = () => {
               <FaYoutube />
             </a>
           </div>
-          <p className="mt-4 text-sm ">
+          <p data-aos="fade-up" data-aos-delay="800" className="mt-4 text-sm ">
             Brand Byte - Your Gateway to Renowned Brands. We celebrate
             excellence in technology, electronics, and automobiles. Explore the
             best with us.

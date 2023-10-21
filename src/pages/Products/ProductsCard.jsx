@@ -11,7 +11,7 @@ const ProductsCard = ({ product }) => {
     inactiveFillColor: "#fbf1a9",
   };
   return (
-    <div className="flex flex-col rounded-lg p-4 border group dark:hover:border-yellow-400 hover:border-brand-primary duration-300  shadow-sm shadow-indigo-100">
+    <div data-aos="fade-up" data-aos-delay="100" className="flex flex-col rounded-lg p-4 border group dark:hover:border-yellow-400 hover:border-brand-primary duration-300  shadow-sm shadow-indigo-100">
       <div className="overflow-hidden rounded-md">
         <img
           alt={carName}

@@ -1,16 +1,32 @@
-import {
-  HiOutlineArrowNarrowLeft,
-  HiOutlineArrowNarrowRight,
-} from "react-icons/hi";
+import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import {
+  HiOutlineArrowNarrowLeft,
+  HiOutlineArrowNarrowRight,
+} from "react-icons/hi";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const HomeSlider = () => {
+  const swiperRef = useRef(null);
+  useEffect(() => {
+    AOS.init({
+      startEvent: "load",
+      duration: 800,
+    });
+  }, []);
+  const handleSlideChange = () => {
+    AOS.refresh();
+  };
   return (
     <div>
       <Swiper
+        onSlideChange={handleSlideChange}
+        ref={swiperRef}
         style={{
           "--swiper-pagination-color": "#fff",
           "--swiper-pagination-bullet-inactive-color": "#999999",
@@ -45,16 +61,28 @@ const HomeSlider = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="container mx-auto  px-6 lg:px-28 xl:px-8 text-white">
               <div className="max-w-2xl">
-                <h1 className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase">
+                <h1
+                  data-aos="fade-right"
+                  data-aos-delay="100"
+                  className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase"
+                >
                   Discover Iconic Brands
                 </h1>
-                <p className="mb-5 max-w-lg">
+                <p
+                  data-aos="fade-right"
+                  data-aos-delay="200"
+                  className="mb-5 max-w-lg"
+                >
                   Explore iconic brands in technology, autos, and more,
                   redefining innovation and excellence, all in one place for
                   you.
                 </p>
                 <Link to="/brands">
-                  <button className="bg-brand-primary hover:bg-brand-secondary duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
+                  <button
+                    data-aos="fade-right"
+                    data-aos-delay="300"
+                    className="bg-brand-primary hover:bg-brand-secondary duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center"
+                  >
                     Get Started
                   </button>
                 </Link>
@@ -73,16 +101,28 @@ const HomeSlider = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="container mx-auto px-6 lg:px-28 xl:px-8 text-white">
               <div className="max-w-2xl">
-                <h1 className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase">
+                <h1
+                  data-aos="fade-right"
+                  data-aos-delay="100"
+                  className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase"
+                >
                   The Pinnacle of Innovation
                 </h1>
-                <p className="mb-5 max-w-lg">
+                <p
+                  data-aos="fade-right"
+                  data-aos-delay="200"
+                  className="mb-5 max-w-lg"
+                >
                   Experience innovations zenith with global giants, setting
                   industry standards for cutting-edge excellence. Discover the
                   future of tech and autos.
                 </p>
                 <Link to="/brands">
-                  <button className="bg-brand-primary hover:bg-brand-secondary duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
+                  <button
+                    data-aos="fade-right"
+                    data-aos-delay="300"
+                    className="bg-brand-primary hover:bg-brand-secondary duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center"
+                  >
                     Get Started
                   </button>
                 </Link>
@@ -101,16 +141,28 @@ const HomeSlider = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="container mx-auto px-6 lg:px-28 xl:px-8 text-white">
               <div className="max-w-2xl">
-                <h1 className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase">
+                <h1
+                  data-aos="fade-right"
+                  data-aos-delay="100"
+                  className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase"
+                >
                   Brand Excellence Unveiled
                 </h1>
-                <p className="mb-5 max-w-lg">
+                <p
+                  data-aos="fade-right"
+                  data-aos-delay="200"
+                  className="mb-5 max-w-lg"
+                >
                   Unveil celebrated brands epitomizing excellence, creating new
                   benchmarks across various industries. Experience a world of
                   brand brilliance.
                 </p>
                 <Link to="/brands">
-                  <button className="bg-brand-primary hover:bg-brand-secondary duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
+                  <button
+                    data-aos="fade-right"
+                    data-aos-delay="300"
+                    className="bg-brand-primary hover:bg-brand-secondary duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center"
+                  >
                     Get Started
                   </button>
                 </Link>
@@ -129,16 +181,28 @@ const HomeSlider = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="container mx-auto px-6 lg:px-28 xl:px-8 text-white">
               <div className="max-w-2xl">
-                <h1 className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase">
+                <h1
+                  data-aos="fade-right"
+                  data-aos-delay="100"
+                  className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase"
+                >
                   Legendary Names, Exceptional Choices
                 </h1>
-                <p className="mb-5 max-w-lg">
+                <p
+                  data-aos="fade-right"
+                  data-aos-delay="200"
+                  className="mb-5 max-w-lg"
+                >
                   Choose legendary brands, the embodiment of quality and
                   reliability, offering exceptional choices for all. Elevate
                   your tech, auto, and more.
                 </p>
                 <Link to="/brands">
-                  <button className="bg-brand-primary hover:bg-brand-secondary duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
+                  <button
+                    data-aos="fade-right"
+                    data-aos-delay="300"
+                    className="bg-brand-primary hover:bg-brand-secondary duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center"
+                  >
                     Get Started
                   </button>
                 </Link>
@@ -157,15 +221,27 @@ const HomeSlider = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="container mx-auto px-6 lg:px-28 xl:px-8 text-white">
               <div className="max-w-2xl">
-                <h1 className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase">
+                <h1
+                  data-aos="fade-right"
+                  data-aos-delay="100"
+                  className="mb-5 text-4xl md:text-6xl font-rajdhani font-bold uppercase"
+                >
                   Your Gateway to Top Brands
                 </h1>
-                <p className="mb-5 max-w-lg">
+                <p
+                  data-aos="fade-right"
+                  data-aos-delay="200"
+                  className="mb-5 max-w-lg"
+                >
                   Step into a realm of top-tier tech, electronics, and autos -
                   where excellence meets unparalleled choice. Explore the best
                 </p>
                 <Link to="/brands">
-                  <button className="bg-brand-primary hover:bg-brand-secondary duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center">
+                  <button
+                    data-aos="fade-right"
+                    data-aos-delay="300"
+                    className="bg-brand-primary hover:bg-brand-secondary duration-300 text-white font-medium  text-lg  py-3 px-6 rounded-md flex justify-center items-center"
+                  >
                     Get Started
                   </button>
                 </Link>

@@ -20,13 +20,13 @@ const GetInTouch = () => {
           <div className="-mx-4 flex flex-wrap lg:justify-between">
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
               <div className="mb-12 max-w-[570px] lg:mb-0">
-                <span className=" mb-4 block text-base font-semibold">
+                <span data-aos="fade-right" data-aos-delay="100" className=" mb-4 block text-base font-semibold">
                   Contact Us
                 </span>
-                <h2 className="text-dark font-rajdhani mb-6 text-2xl md:text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
+                <h2 data-aos="fade-right" data-aos-delay="200" className="text-dark font-rajdhani mb-6 text-2xl md:text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
                   GET IN TOUCH WITH US
                 </h2>
-                <p className="text-body-color mb-9 text-base leading-relaxed">
+                <p data-aos="fade-right" data-aos-delay="300" className="text-body-color mb-9 text-base leading-relaxed">
                   Our commitment to providing you with access to these iconic
                   brands means you can make informed choices, knowing that each
                   product meets the highest standards of performance,
@@ -35,7 +35,7 @@ const GetInTouch = () => {
                   appreciates the finer things in life, Brand Byte is here to
                   enrich your journey.
                 </p>
-                <div className="mb-8 flex w-full max-w-[370px]">
+                <div data-aos="fade-right" data-aos-delay="400" className="mb-8 flex w-full max-w-[370px]">
                   <div className="bg-brand-primary   mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="24"
@@ -55,7 +55,7 @@ const GetInTouch = () => {
                     </p>
                   </div>
                 </div>
-                <div className="mb-8 flex w-full max-w-[370px]">
+                <div data-aos="fade-right" data-aos-delay="500" className="mb-8 flex w-full max-w-[370px]">
                   <div className="bg-brand-primary    mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="24"
@@ -75,7 +75,7 @@ const GetInTouch = () => {
                     <p className="text-body-color text-base">+8801710467100</p>
                   </div>
                 </div>
-                <div className="mb-8 flex w-full max-w-[370px]">
+                <div data-aos="fade-right" data-aos-delay="600" className="mb-8 flex w-full max-w-[370px]">
                   <div className="bg-brand-primary   mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="28"
@@ -98,7 +98,7 @@ const GetInTouch = () => {
               </div>
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-              <div className="relative rounded-lg bg-white  dark:bg-gray-900  p-8 shadow-lg sm:p-12">
+              <div data-aos="fade-left" data-aos-delay="800" className="relative rounded-lg bg-white  dark:bg-gray-900  p-8 shadow-lg sm:p-12">
                 <form onSubmit={handleGetInTouch}>
                   <div className="mb-6">
                     <input

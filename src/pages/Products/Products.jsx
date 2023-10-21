@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import DynamicProductsSlider from "../../components/DynamicProductsSlider/DynamicProductsSlider/DynamicProductsSlider";
 import BrandShowcase from "../../components/BrandShowcase/BrandShowcase";
 import Discount from "../../components/Discount/Discount";
+import { Helmet } from "react-helmet-async";
 
 const Products = () => {
   const products = useLoaderData();
@@ -26,6 +27,9 @@ const Products = () => {
   );
   return (
     <div className="dark:bg-gray-900 ">
+      <Helmet>
+        <title>{param.brand_name} - Brand Byte</title>
+      </Helmet>
       <ScrollToTopOnMount />
       <Breadcrumbs
         image={image}

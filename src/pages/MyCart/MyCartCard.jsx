@@ -35,7 +35,7 @@ const MyCartCard = ({ cartItem, setCartItems, cartItems }) => {
       });
   };
   return (
-    <div className="flex flex-col md:flex-row gap-4 md:gap-8 p-6 mb-4 md:items-center rounded-lg shadow-lg dark:shadow-gray-950 border border-transparent dark:border dark:border-yellow-400 hover:shadow-brand-primary/50 duration-300 text-base xl:text-lg">
+    <div data-aos="fade-up" data-aos-delay="100" className="flex flex-col md:flex-row gap-4 md:gap-8 p-6 mb-4 md:items-center rounded-lg shadow-lg dark:shadow-gray-950 border border-transparent dark:border dark:border-yellow-400 hover:shadow-brand-primary/50 duration-300 text-base xl:text-lg">
       <div className="xl:w-64 md:w-40  h-56 md:h-32">
         <img
           className="rounded-lg w-full h-full object-cover"

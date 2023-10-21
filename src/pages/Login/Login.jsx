@@ -9,6 +9,7 @@ import logoWhite from "/src/assets/images/logo-white.png";
 import { AuthContext } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet-async";
 const Login = () => {
   const { logIn, googleLogin, theme } = useContext(AuthContext);
   const location = useLocation();
@@ -108,6 +109,9 @@ const Login = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Login | Brand Byte</title>
+      </Helmet>
       <Breadcrumbs
         image={image}
         name={"Login Here"}
@@ -115,7 +119,7 @@ const Login = () => {
       ></Breadcrumbs>
       <div className="xl:py-24 lg:py-20 md:py-16 py-10 dark:bg-gray-900">
         <div className="container mx-auto px-6 lg:px-8 flex flex-col md:flex-row gap-8 items-center">
-          <div className="md:w-1/2 w-full ">
+          <div data-aos="fade-right" data-aos-delay="100" className="md:w-1/2 w-full ">
             <div className="w-full hover:border-brand-primary duration-300 max-w-sm mx-auto p-4  bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
               <img
                 className="w-48 mx-auto mb-2"
@@ -185,7 +189,7 @@ const Login = () => {
             </div>
           </div>
           <div className="md:w-1/2">
-            <img src="/src/assets/images/bmwcar.png" alt="car" />
+            <img data-aos="fade-left" data-aos-delay="200" src="/src/assets/images/bmwcar.png" alt="car" />
           </div>
         </div>
       </div>

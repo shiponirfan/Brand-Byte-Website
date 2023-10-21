@@ -1,11 +1,8 @@
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
-import image from "../../assets/images/home_slider/home_slider2.jpg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BsGoogle } from "react-icons/bs";
 import { BiLogIn } from "react-icons/bi";
 import { useContext } from "react";
-import logo from "/src/assets/images/logo.png";
-import logoWhite from "/src/assets/images/logo-white.png";
 import { AuthContext } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -113,7 +110,7 @@ const Login = () => {
         <title>Login | Brand Byte</title>
       </Helmet>
       <Breadcrumbs
-        image={image}
+        image={'https://i.ibb.co/nMrbhFT/home-slider2.jpg'}
         name={"Login Here"}
         breadCrumbs={breadCrumbs}
       ></Breadcrumbs>
@@ -123,7 +120,7 @@ const Login = () => {
             <div className="w-full hover:border-brand-primary duration-300 max-w-sm mx-auto p-4  bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
               <img
                 className="w-48 mx-auto mb-2"
-                src={theme === "light" ? logo : logoWhite}
+                src={theme === "light" ? 'https://i.ibb.co/0QL8D0s/logo.png' : 'https://i.ibb.co/tKrPXKk/logo-white.png'}
                 alt="logo"
               />
               <h5 className="text-2xl mb-6 text-center font-rajdhani font-bold text-gray-900 dark:text-white">
@@ -189,7 +186,7 @@ const Login = () => {
             </div>
           </div>
           <div className="md:w-1/2">
-            <img data-aos="fade-left" data-aos-delay="200" src="/src/assets/images/bmwcar.png" alt="car" />
+            <img data-aos="fade-left" data-aos-delay="200" src="https://i.ibb.co/L1xWKmc/bmwcar.png" alt="car" />
           </div>
         </div>
       </div>

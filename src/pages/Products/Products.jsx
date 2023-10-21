@@ -1,5 +1,4 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import image from "../../assets/images/home_slider/home_slider3.jpg";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import ProductsCard from "./ProductsCard";
 import { useEffect } from "react";
@@ -32,7 +31,7 @@ const Products = () => {
       </Helmet>
       <ScrollToTopOnMount />
       <Breadcrumbs
-        image={image}
+        image={"https://i.ibb.co/cLhqKv6/home-slider3.jpg"}
         name={param.brand_name}
         breadCrumbs={breadCrumbs}
       ></Breadcrumbs>

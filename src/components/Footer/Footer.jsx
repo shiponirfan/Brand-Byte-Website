@@ -16,7 +16,7 @@ const Footer = () => {
               data-aos="fade-right"
               data-aos-delay="100"
               className="w-64"
-              src="/src/assets/images/logo-white.png"
+              src="https://i.ibb.co/tKrPXKk/logo-white.png"
               alt="logo"
             />
           </Link>

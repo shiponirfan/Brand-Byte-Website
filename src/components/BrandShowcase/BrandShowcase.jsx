@@ -19,7 +19,7 @@ const BrandShowcase = () => {
           </Link>
         </div>
         <div className="md:w-2/4">
-          <img data-aos="fade-left" data-aos-delay="600" data-aos-offset="200" src="/src/assets/images/bmwcar.png" alt="BMW Car" />
+          <img data-aos="fade-left" data-aos-delay="600" data-aos-offset="200" src="https://i.ibb.co/L1xWKmc/bmwcar.png" alt="BMW Car" />
         </div>
       </div>
     </div>

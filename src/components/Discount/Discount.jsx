@@ -4,7 +4,7 @@ const Discount = () => {
   return (
     <div
       className="hero bg-fixed"
-      style={{ backgroundImage: "url(/src/assets/images/discount.jpg)" }}
+      style={{ backgroundImage: "url(https://i.ibb.co/dkrYh7j/discount.jpg)" }}
     >
       <div className="hero-overlay bg-opacity-60 "></div>
       <div className="container mx-auto px-5 py-20 md:py-24 xl:py-36 text-center lg:px-8 text-white">

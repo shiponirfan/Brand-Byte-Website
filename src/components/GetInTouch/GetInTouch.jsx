@@ -13,7 +13,7 @@ const GetInTouch = () => {
   return (
     <div
       className="bg-cover bg-no-repeat bg-bottom"
-      style={{ backgroundImage: "url(/src/assets/images/GetInTouch.jpg)" }}
+      style={{ backgroundImage: "url(https://i.ibb.co/RY4vgqB/Get-In-Touch.jpg)" }}
     >
       <section className="relative z-10 overflow-hidden bg-black bg-opacity-70 text-white py-20 lg:py-[120px]">
         <div className="container mx-auto px-6 lg:px-8">

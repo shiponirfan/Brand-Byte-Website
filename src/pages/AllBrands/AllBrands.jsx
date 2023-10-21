@@ -14,13 +14,15 @@ const AllBrands = () => {
     return null;
   }
   return (
-    <div>
+    <div className="dark:bg-gray-900">
       <Helmet>
         <title>Brands | Brand Byte</title>
       </Helmet>
       <ScrollToTopOnMount />
       <Brands></Brands>
-      <Discount></Discount>
+      <div data-aos="fade-up" data-aos-delay="350">
+        <Discount></Discount>
+      </div>
       <ChooseUs></ChooseUs>
       <BrandShowcase></BrandShowcase>
     </div>

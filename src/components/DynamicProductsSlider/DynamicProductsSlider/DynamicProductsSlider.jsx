@@ -83,7 +83,7 @@ const DynamicProductsSlider = ({ bannerBrand }) => {
         className="w-1/5 hidden xl:block bg-cover bg-center"
         style={{
           backgroundImage:
-            "url(/src/assets/images/home_slider/home_slider3.jpg)",
+            "url(https://i.ibb.co/cLhqKv6/home-slider3.jpg)",
         }}
       >
         <div className="hero-overlay flex flex-col justify-center xl:justify-between h-full bg-opacity-80 text-white text-center p-8">

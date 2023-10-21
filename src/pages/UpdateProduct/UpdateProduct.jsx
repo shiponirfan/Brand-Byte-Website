@@ -1,5 +1,4 @@
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
-import image from "../../assets/images/home_slider/home_slider4.jpg";
 import { Rating, Star } from "@smastrom/react-rating";
 import { useState } from "react";
 import Swal from "sweetalert2";
@@ -67,7 +66,7 @@ const UpdateProduct = () => {
         <title>Update Product | Brand Byte</title>
       </Helmet>
       <Breadcrumbs
-        image={image}
+        image={'https://i.ibb.co/ZLSPSVs/home-slider4.jpg'}
         name={name}
         breadCrumbs={breadCrumbs}
       ></Breadcrumbs>
@@ -226,7 +225,7 @@ const UpdateProduct = () => {
           </form>
         </div>
         <div className="lg:w-1/2">
-          <img data-aos="fade-left" data-aos-delay="300" src="/src/assets/images/bmwcar.png" alt="car" />
+          <img data-aos="fade-left" data-aos-delay="300" src="https://i.ibb.co/L1xWKmc/bmwcar.png" alt="car" />
         </div>
       </div>
     </div>

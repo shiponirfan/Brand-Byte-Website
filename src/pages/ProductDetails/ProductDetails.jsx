@@ -232,7 +232,7 @@ const ProductDetails = () => {
             className="bg-brand-primary text-white text-center rounded-lg  mb-8 bg-center bg-cover"
             style={{
               backgroundImage:
-                "url(/src/assets/images/home_slider/home_slider6.jpg)",
+                "url(https://i.ibb.co/BfDVYpn/home-slider6.jpg)",
             }}
           >
             <div className="bg-black bg-opacity-80 py-12 rounded-lg">

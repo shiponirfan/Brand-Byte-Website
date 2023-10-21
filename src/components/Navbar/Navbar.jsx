@@ -1,6 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "/src/assets/images/logo.png";
-import logoWhite from "/src/assets/images/logo-white.png";
 import {
   BiLogIn,
   BiChevronDown,
@@ -155,7 +153,11 @@ const Navbar = () => {
           <Link to="/">
             <img
               className="md:w-64 w-36"
-              src={theme === "light" ? logo : logoWhite}
+              src={
+                theme === "light"
+                  ? "https://i.ibb.co/0QL8D0s/logo.png"
+                  : "https://i.ibb.co/tKrPXKk/logo-white.png"
+              }
               alt="Brand Byte Logo"
             />
           </Link>
@@ -177,7 +179,7 @@ const Navbar = () => {
                     {user?.photoURL ? (
                       <img src={user?.photoURL} />
                     ) : (
-                      <img src="/src/assets/images/user.png" />
+                      <img src="https://i.ibb.co/MPpqQSM/user.png" />
                     )}
                   </div>
                 </label>

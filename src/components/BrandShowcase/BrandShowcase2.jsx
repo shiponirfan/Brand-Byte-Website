@@ -18,7 +18,7 @@ const BrandShowcase2 = () => {
           <img
             data-aos="flip-left"
             data-aos-delay="300"
-            src="/src/assets/images/home_slider/home_slider6.jpg"
+            src="https://i.ibb.co/BfDVYpn/home-slider6.jpg"
             className="w-1/2 rounded-lg"
             alt="Car"
           />
@@ -26,14 +26,14 @@ const BrandShowcase2 = () => {
             <img
               data-aos="flip-up"
               data-aos-delay="400"
-              src="/src/assets/images/home_slider/home_slider4.jpg"
+              src="https://i.ibb.co/ZLSPSVs/home-slider4.jpg"
               className="mb-8 rounded-lg"
               alt="Car"
             />
             <img
               data-aos="flip-down"
               data-aos-delay="500"
-              src="/src/assets/images/home_slider/home_slider3.jpg"
+              src="https://i.ibb.co/cLhqKv6/home-slider3.jpg"
               className="rounded-lg"
               alt="Car"
             />

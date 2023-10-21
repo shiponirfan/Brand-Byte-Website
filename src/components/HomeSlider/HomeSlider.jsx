@@ -55,7 +55,7 @@ const HomeSlider = () => {
             className="hero min-h-home-h"
             style={{
               backgroundImage:
-                "url(/src/assets/images/home_slider/home_slider1.jpg)",
+                "url(https://i.ibb.co/w6BCrSs/home-slider1.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
@@ -95,7 +95,7 @@ const HomeSlider = () => {
             className="hero min-h-home-h"
             style={{
               backgroundImage:
-                "url(/src/assets/images/home_slider/home_slider2.jpg)",
+                "url(https://i.ibb.co/nMrbhFT/home-slider2.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
@@ -135,7 +135,7 @@ const HomeSlider = () => {
             className="hero min-h-home-h"
             style={{
               backgroundImage:
-                "url(/src/assets/images/home_slider/home_slider3.jpg)",
+                "url(https://i.ibb.co/cLhqKv6/home-slider3.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
@@ -175,7 +175,7 @@ const HomeSlider = () => {
             className="hero min-h-home-h"
             style={{
               backgroundImage:
-                "url(/src/assets/images/home_slider/home_slider4.jpg)",
+                "url(https://i.ibb.co/ZLSPSVs/home-slider4.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
@@ -215,7 +215,7 @@ const HomeSlider = () => {
             className="hero min-h-home-h"
             style={{
               backgroundImage:
-                "url(/src/assets/images/home_slider/home_slider5.jpg)",
+                "url(https://i.ibb.co/M8WFNL9/home-slider5.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>

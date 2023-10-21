@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
-import error from "/src/assets/images/error.png";
-import errorDark from "/src/assets/images/errordark.png";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Helmet } from "react-helmet-async";
@@ -17,7 +15,7 @@ const ErrorPage = () => {
         <div className="text-center">
           <img
             className="w-96"
-            src={theme === "light" ? error : errorDark}
+            src={theme === "light" ? 'https://i.ibb.co/5GC7g1X/error.png' : 'https://i.ibb.co/b1pwZCD/errordark.png'}
             alt="error image"
           />
 

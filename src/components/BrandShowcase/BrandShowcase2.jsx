@@ -22,7 +22,7 @@ const BrandShowcase2 = () => {
             className="w-1/2 rounded-lg"
             alt="Car"
           />
-          <div>
+          <div className="w-1/2">
             <img
               data-aos="flip-up"
               data-aos-delay="400"

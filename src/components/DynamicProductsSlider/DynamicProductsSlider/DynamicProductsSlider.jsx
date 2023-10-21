@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 const DynamicProductsSlider = ({ bannerBrand }) => {
   const [brands, setBrands] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/brands")
+    fetch("https://brand-shop-server-side-ejgxztk9l-shipon-irfans-projects.vercel.app/brands")
       .then((res) => res.json())
       .then((data) => {
         const getBrand = data.find((brand) => brand.brand_name === bannerBrand);

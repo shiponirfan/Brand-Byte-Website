@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -8,25 +7,11 @@ import {
   HiOutlineArrowNarrowRight,
 } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const HomeSlider = () => {
-  const swiperRef = useRef(null);
-  useEffect(() => {
-    AOS.init({
-      startEvent: "load",
-      duration: 800,
-    });
-  }, []);
-  const handleSlideChange = () => {
-    AOS.refresh();
-  };
   return (
     <div>
       <Swiper
-        onSlideChange={handleSlideChange}
-        ref={swiperRef}
         style={{
           "--swiper-pagination-color": "#fff",
           "--swiper-pagination-bullet-inactive-color": "#999999",
@@ -54,8 +39,7 @@ const HomeSlider = () => {
           <div
             className="hero min-h-home-h"
             style={{
-              backgroundImage:
-                "url(https://i.ibb.co/w6BCrSs/home-slider1.jpg)",
+              backgroundImage: "url(https://i.ibb.co/w6BCrSs/home-slider1.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
@@ -94,8 +78,7 @@ const HomeSlider = () => {
           <div
             className="hero min-h-home-h"
             style={{
-              backgroundImage:
-                "url(https://i.ibb.co/nMrbhFT/home-slider2.jpg)",
+              backgroundImage: "url(https://i.ibb.co/nMrbhFT/home-slider2.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
@@ -134,8 +117,7 @@ const HomeSlider = () => {
           <div
             className="hero min-h-home-h"
             style={{
-              backgroundImage:
-                "url(https://i.ibb.co/cLhqKv6/home-slider3.jpg)",
+              backgroundImage: "url(https://i.ibb.co/cLhqKv6/home-slider3.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
@@ -174,8 +156,7 @@ const HomeSlider = () => {
           <div
             className="hero min-h-home-h"
             style={{
-              backgroundImage:
-                "url(https://i.ibb.co/ZLSPSVs/home-slider4.jpg)",
+              backgroundImage: "url(https://i.ibb.co/ZLSPSVs/home-slider4.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
@@ -214,8 +195,7 @@ const HomeSlider = () => {
           <div
             className="hero min-h-home-h"
             style={{
-              backgroundImage:
-                "url(https://i.ibb.co/M8WFNL9/home-slider5.jpg)",
+              backgroundImage: "url(https://i.ibb.co/M8WFNL9/home-slider5.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>

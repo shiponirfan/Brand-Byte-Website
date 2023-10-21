@@ -38,13 +38,13 @@ const Routes = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(`https://brand-shop-server-side-ejgxztk9l-shipon-irfans-projects.vercel.app/product/${params.id}`),
       },
       {
         path: "/products/:brand_name",
         element: <Products></Products>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.brand_name}`),
+          fetch(`https://brand-shop-server-side-ejgxztk9l-shipon-irfans-projects.vercel.app/products/${params.brand_name}`),
       },
       {
         path: "/product/:id",
@@ -54,7 +54,7 @@ const Routes = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(`https://brand-shop-server-side-ejgxztk9l-shipon-irfans-projects.vercel.app/product/${params.id}`),
       },
       {
         path: "/brands",

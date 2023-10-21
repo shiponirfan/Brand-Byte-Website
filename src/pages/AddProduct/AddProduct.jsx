@@ -36,7 +36,7 @@ const AddProduct = () => {
       rating,
     };
 
-    fetch("http://localhost:5000/products", {
+    fetch("https://brand-shop-server-side-5rm7yi47y-shipon-irfans-projects.vercel.app/products", {
       method: "POST",
       headers: {
         "content-type": "application/json",

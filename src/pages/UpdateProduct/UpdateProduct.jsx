@@ -39,7 +39,7 @@ const UpdateProduct = () => {
       rating,
     };
 
-    fetch(`http://localhost:5000/product/${loadedProduct._id}`, {
+    fetch(`https://brand-shop-server-side-5rm7yi47y-shipon-irfans-projects.vercel.app/product/${loadedProduct._id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

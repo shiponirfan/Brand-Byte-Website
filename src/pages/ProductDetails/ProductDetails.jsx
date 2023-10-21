@@ -46,7 +46,7 @@ const ProductDetails = () => {
 
   const handleAddToCart = () => {
     const userEmail = user.email;
-    fetch(`http://localhost:5000/addToCart/${userEmail}`)
+    fetch(`https://brand-shop-server-side-5rm7yi47y-shipon-irfans-projects.vercel.app/addToCart/${userEmail}`)
       .then((res) => res.json())
       .then((data) => {
         const checkCartItem = data.find((item) => item._id === _id);
@@ -60,7 +60,7 @@ const ProductDetails = () => {
           });
         } else {
           const productItem = { ...product, userEmail: user.email };
-          fetch("http://localhost:5000/addToCart", {
+          fetch("https://brand-shop-server-side-5rm7yi47y-shipon-irfans-projects.vercel.app/addToCart", {
             method: "POST",
             headers: {
               "content-type": "application/json",

@@ -39,7 +39,7 @@ const UpdateProduct = () => {
       rating,
     };
 
-    fetch(`https://brand-shop-server-side-5rm7yi47y-shipon-irfans-projects.vercel.app/product/${loadedProduct._id}`, {
+    fetch(`https://brand-shop-server-side-d8szn2o40-shipon-irfans-projects.vercel.app/product/${loadedProduct._id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -224,7 +224,7 @@ const UpdateProduct = () => {
             </div>
           </form>
         </div>
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 overflow-hidden">
           <img data-aos="fade-left" data-aos-delay="300" src="https://i.ibb.co/L1xWKmc/bmwcar.png" alt="car" />
         </div>
       </div>

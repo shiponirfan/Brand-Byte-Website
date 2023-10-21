@@ -36,13 +36,16 @@ const AddProduct = () => {
       rating,
     };
 
-    fetch("https://brand-shop-server-side-5rm7yi47y-shipon-irfans-projects.vercel.app/products", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(addedProduct),
-    })
+    fetch(
+      "https://brand-shop-server-side-d8szn2o40-shipon-irfans-projects.vercel.app/products",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(addedProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
@@ -65,13 +68,17 @@ const AddProduct = () => {
         <title>Add Product | Brand Byte</title>
       </Helmet>
       <Breadcrumbs
-        image={'https://i.ibb.co/cLhqKv6/home-slider3.jpg'}
+        image={"https://i.ibb.co/cLhqKv6/home-slider3.jpg"}
         name={name}
         breadCrumbs={breadCrumbs}
       ></Breadcrumbs>
       <div className="container  mx-auto px-6 flex flex-col lg:flex-row gap-12 items-center justify-between lg:px-8 py-16 lg:py-20 xl:py-24">
         <div className="lg:w-1/2">
-          <form  data-aos="fade-right" data-aos-delay="100" onSubmit={handleAddProduct}>
+          <form
+            data-aos="fade-right"
+            data-aos-delay="100"
+            onSubmit={handleAddProduct}
+          >
             <div className="">
               <div className="flex justify-between gap-6">
                 <div className="w-1/2">
@@ -218,8 +225,13 @@ const AddProduct = () => {
             </div>
           </form>
         </div>
-        <div  className="lg:w-1/2">
-          <img data-aos="fade-left" data-aos-delay="200" src="https://i.ibb.co/ngq6yhF/black-bmw-6.png" alt="" />
+        <div className="lg:w-1/2 overflow-hidden">
+          <img
+            data-aos="fade-left"
+            data-aos-delay="200"
+            src="https://i.ibb.co/ngq6yhF/black-bmw-6.png"
+            alt=""
+          />
         </div>
       </div>
     </div>

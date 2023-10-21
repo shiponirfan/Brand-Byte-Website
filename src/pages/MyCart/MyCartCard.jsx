@@ -16,7 +16,7 @@ const MyCartCard = ({ cartItem, setCartItems, cartItems }) => {
   };
   const handleRemove = () => {
     const userEmail = user.email;
-    fetch(`https://brand-shop-server-side-5rm7yi47y-shipon-irfans-projects.vercel.app/addToCart/${_id}/${userEmail}`, {
+    fetch(`https://brand-shop-server-side-d8szn2o40-shipon-irfans-projects.vercel.app/addToCart/${_id}/${userEmail}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

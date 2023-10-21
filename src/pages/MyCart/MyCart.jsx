@@ -11,7 +11,7 @@ const MyCart = () => {
   const [cartItems, setCartItems] = useState({});
   const [cartLoading, setCartLoading] = useState(true);
   useEffect(() => {
-    fetch(`https://brand-shop-server-side-5rm7yi47y-shipon-irfans-projects.vercel.app/addToCart/${user.email}`)
+    fetch(`https://brand-shop-server-side-d8szn2o40-shipon-irfans-projects.vercel.app/addToCart/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setCartItems(data);
